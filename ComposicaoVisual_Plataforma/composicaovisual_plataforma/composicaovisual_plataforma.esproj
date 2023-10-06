@@ -11,6 +11,12 @@
     <BuildOutputFolder>$(MSBuildProjectDirectory)\dist</BuildOutputFolder>
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="src\views\" />
+    <TypeScriptConfiguration Remove="src\views\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="src\views\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".vscode\launch.json" />
   </ItemGroup>
 </Project>
