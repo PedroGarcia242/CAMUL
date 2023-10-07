@@ -1,7 +1,5 @@
 #root {
     max-width: 100%;
-    margin: 0 auto;
-    padding: 2rem;
     text-align: center;
 }
 
@@ -51,7 +49,7 @@
     left: 0px;
     top: 0px;
     width: 100%;
-    height: 90px;
+    height: 70px;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -65,7 +63,7 @@
         padding-right: 60px;
         font-family: "PureEvil";
         color: #E9D8A6;
-        font-size: 50px;
+        font-size: 45px;
         -webkit-text-stroke: 2px #9B2226;
     }
 
@@ -79,13 +77,13 @@
     .navbar-items a {
         font-family: "Koulen";
         color: #E9D8A6;
-        padding-right: 60px;
-        font-size: 35px;
+        padding-right: 50px;
+        font-size: 30px;
     }
 
         .navbar-items a:hover {
             color: #E9D8A6;
-            text-shadow: 1px 1px 0 #9B2226, -1px 1px 0 #9B2226, -1px -1px 0 #9B2226, 1px -1px 0 #9B2226;
+            text-shadow: 2px 2px 0 #9B2226, -2px 2px 0 #9B2226, -2px -2px 0 #9B2226, 2px -2px 0 #9B2226;
         }
 
 .navbar-language {
@@ -93,7 +91,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-left: 120px;
+    padding-left: 90px;
     padding-right: 40px;
 }
 
@@ -101,10 +99,28 @@
         font-family: "Koulen";
         color: #E9D8A6;
         padding-right: 20px;
-        font-size: 35px;
+        font-size: 30px;
     }
 
 .banner {
+    display: grid;
+    align-items: center;
+}
+
+.banner-image {
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    height: auto;
+}
+
+.banner a {
+    grid-column: 1;
+    grid-row: 1;
+    font-family: "PureEvil";
+    color: #E9D8A6;
+    font-size: 200px;
+    text-shadow: -6px 6px 0 #9B2226, 6px -6px 0 #9B2226;
 }
 
 .card {
