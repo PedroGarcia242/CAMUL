@@ -10,7 +10,7 @@ function App() {
     const displayPage = () => {
         switch (currentPage) {
             case Pages.INFO:
-                return displayHomePage(); //displayInfoPage()
+                return displayInfoPage();
             case Pages.TICKETS:
                 return displayHomePage(); //displayTicketsPage()
             default:
@@ -32,10 +32,24 @@ function App() {
             </>
         )
     }
+
+    const displayInfoPage = () => {
+        return (
+            <>
+                <div className="info">
+                </div>
+                <div className="card">
+                    <p>PORTO - PORTUGAL</p>
+                    <p>13 &gt; 15 AUGUST</p>
+                </div>
+            </>
+        )
+    }
+
     return (
         <>
             <div className="navbar">
-                <h1 className="text-button" onClick={() => setCurrentPage(Pages.INFO)}>HW</h1>
+                <h1 className="text-button" onClick={() => setCurrentPage(Pages.HOME)}>HW</h1>
                 <div className="navbar-items">
                     <p className="text-button" onClick={() => setCurrentPage(Pages.INFO)}>INFO</p>
                     <p className="text-button" onClick={() => setCurrentPage(Pages.TICKETS)}>TICKETS</p>
