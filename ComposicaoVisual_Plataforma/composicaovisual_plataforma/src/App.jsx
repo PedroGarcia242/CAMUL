@@ -12,7 +12,7 @@ function App() {
             case Pages.INFO:
                 return displayInfoPage();
             case Pages.TICKETS:
-                return displayHomePage(); //displayTicketsPage()
+                return displayTicketsPage();
             default:
                 return displayHomePage();
         }
@@ -37,6 +37,21 @@ function App() {
         return (
             <>
                 <div className="info">
+                    <p>Info</p>
+                </div>
+                <div className="card">
+                    <p>PORTO - PORTUGAL</p>
+                    <p>13 &gt; 15 AUGUST</p>
+                </div>
+            </>
+        )
+    }
+
+    const displayTicketsPage = () => {
+        return (
+            <>
+                <div className="info">
+                    <p>Tickets</p>
                 </div>
                 <div className="card">
                     <p>PORTO - PORTUGAL</p>

@@ -139,7 +139,6 @@
         width: 100%;
     }
 
-
 .info {
     position: relative;
     text-align: center;
@@ -148,6 +147,39 @@
     background-image: linear-gradient(#001219, #9B2226);
     z-index: -1;
 }
+
+    .info p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: "PureEvil";
+        color: #E9D8A6;
+        font-size: 180px;
+        margin: 0;
+        width: 100%;
+    }
+
+.tickets {
+    position: relative;
+    text-align: center;
+    user-select: none;
+    height: 630px;
+    background-image: linear-gradient(#001219, #9B2226);
+    z-index: -1;
+}
+
+    .tickets p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: "PureEvil";
+        color: #E9D8A6;
+        font-size: 180px;
+        margin: 0;
+        width: 100%;
+    }
 
 .card {
     display: flex;
