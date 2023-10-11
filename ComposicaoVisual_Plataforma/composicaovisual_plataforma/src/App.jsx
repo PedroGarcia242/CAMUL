@@ -39,10 +39,6 @@ function App() {
                 <div className="info">
                     <p>Info</p>
                 </div>
-                <div className="card">
-                    <p>PORTO - PORTUGAL</p>
-                    <p>13 &gt; 15 AUGUST</p>
-                </div>
             </>
         )
     }
@@ -50,12 +46,8 @@ function App() {
     const displayTicketsPage = () => {
         return (
             <>
-                <div className="info">
+                <div className="info {currentPage == Pages.TICKETS ? 'fadeIn' : 'fadeOut'}">
                     <p>Tickets</p>
-                </div>
-                <div className="card">
-                    <p>PORTO - PORTUGAL</p>
-                    <p>13 &gt; 15 AUGUST</p>
                 </div>
             </>
         )
@@ -64,10 +56,20 @@ function App() {
     return (
         <>
             <div className="navbar">
-                <h1 className="text-button" onClick={() => setCurrentPage(Pages.HOME)}>HW</h1>
+                <h1 className="text-button" onClick={() => {
+                    setCurrentPage(Pages.HOME)
+                    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+                }
+                }>HW</h1>
                 <div className="navbar-items">
-                    <p className="text-button" onClick={() => setCurrentPage(Pages.INFO)}>INFO</p>
-                    <p className="text-button" onClick={() => setCurrentPage(Pages.TICKETS)}>TICKETS</p>
+                    <p className="text-button" onClick={() => {
+                        setCurrentPage(Pages.INFO)
+                        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+                    }}>INFO</p>
+                    <p className="text-button" onClick={() => {
+                        setCurrentPage(Pages.TICKETS)
+                        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+                    }}>TICKETS</p>
                     <div className="navbar-language">
                         <p className="text-button">PT</p>
                         <p>|</p>
@@ -76,6 +78,15 @@ function App() {
                 </div>
             </div>
             {displayPage()}
+            <div className="footer">
+                <div className="footer-items">
+                <p className="text-button">Contact</p>
+                <p>|</p>
+                <p className="text-button">General Information</p>
+                <p>|</p>
+                    <p className="text-button">Media</p>
+                </div>
+            </div>
         </>
     )
 }
