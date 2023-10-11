@@ -1,4 +1,6 @@
-import banner1 from './assets/banner-1-image_.jpg'
+import banner1 from './assets/banner-1-image.jpg'
+import banner2 from './assets/hw_poster.png'
+import banner3 from './assets/infoSection_background.jpg'
 import './App.css'
 import { useState } from 'react'
 
@@ -21,13 +23,28 @@ function App() {
     const displayHomePage = () => {
         return (
             <>
-                <div className="banner">
-                    <img src={banner1} alt="banner" />
-                    <p>Hell on Water</p>
-                </div>
-                <div className="card">
-                    <p>PORTO - PORTUGAL</p>
-                    <p>13 &gt; 15 AUGUST</p>
+            <div className="content">
+                    <div className="banner">
+                        <img src={banner1} alt="banner" />
+                        <p>Hell on Water</p>
+                    </div>
+                    <div className="card">
+                        <p>PORTO - PORTUGAL</p>
+                        <p>13 &gt; 15 AUGUST</p>
+                    </div>
+                    <div className="banner">
+                        <img src={banner2} alt="banner" />
+                    </div>
+                    <div className="card">
+                    </div>
+                    <div className="complex-banner">
+                        <img src={banner3} alt="banner" />
+                        <div className="text">
+                            <p>BRING THE</p>
+                            <p>HEAT TO A WHOLE</p>
+                            <p>NEW LEVEL</p>
+                        </div>
+                    </div>
                 </div>
             </>
         )

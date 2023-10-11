@@ -115,16 +115,15 @@
     position: relative;
     text-align: center;
     user-select: none;
-    height: 630px;
-    background-color: #001219;
-    z-index: -1;
+    height: 600px;
+    overflow: hidden;
 }
 
     .banner img {
         width: 100%;
         min-height: 700px;
         object-fit: cover;
-        opacity: 0.3;
+        opacity: 0.5;
     }
 
     .banner p {
@@ -137,6 +136,38 @@
         font-size: 180px;
         margin: 0;
         width: 100%;
+    }
+
+.complex-banner {
+    position: relative;
+    text-align: center;
+    user-select: none;
+    height: 600px;
+    background-color: #E9D8A6;
+    overflow: hidden;
+}
+
+    .complex-banner img {
+        width: auto;
+        height: 500px;
+        padding-left: 350px;
+        padding-top: 50px;
+    }
+
+    .complex-banner .text {
+        position: absolute;
+        top: 15%;
+        left: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .complex-banner p {
+        font-family: NewRocker;
+        color: #001219;
+        font-size: 60px;
+        margin: 0;
     }
 
 .info {
@@ -180,6 +211,10 @@
         margin: 0;
         width: 100%;
     }
+
+.content {
+    background-image: linear-gradient(#001219, #9B2226);
+}
 
 .card {
     display: flex;
