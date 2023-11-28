@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "platform_mooc", "Platform_MOOC\platform_mooc.esproj", "{6E062105-B991-472C-8CF2-D65A8C6F4162}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6E062105-B991-472C-8CF2-D65A8C6F4162}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E062105-B991-472C-8CF2-D65A8C6F4162}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E062105-B991-472C-8CF2-D65A8C6F4162}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{6E062105-B991-472C-8CF2-D65A8C6F4162}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E062105-B991-472C-8CF2-D65A8C6F4162}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E062105-B991-472C-8CF2-D65A8C6F4162}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4AE4C314-7768-4AD1-A1B6-819C2E966BEF}
+	EndGlobalSection
+EndGlobal
