@@ -1,3 +1,5 @@
+import profile_background from './assets/plataforma_fundo1.png'
+
 import './App.css'
 import { useState } from 'react'
 
@@ -31,9 +33,26 @@ function App() {
             //create one element and put the desired html inside
             <>
                 <div className="content">
-                    <h3>
-                    asdasdsa
-                    </h3>
+                    <img className="background" src={profile_background} alt=""/>
+                    <div className="banner"/>
+
+                    <div className="group">
+                        <div className="profile">
+                            <div className="picture"/>
+
+                            <div className="about">
+                                <h2>About Me</h2>
+
+                                <div className="square"/>
+                            </div>
+                        </div>
+                        <div className="mooc">
+                            <progress className="progress" value="70" max="100" />
+
+                            <div className="moocs">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </>
         )
@@ -93,13 +112,6 @@ function App() {
             {displayPage()}
 
             <div className="footer">
-                <div className="footer-items">
-                    <p className="text-button">Contact</p>
-                    <p>|</p>
-                    <p className="text-button">General Information</p>
-                    <p>|</p>
-                    <p className="text-button">Media</p>
-                </div>
             </div>
         </>
     )
