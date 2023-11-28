@@ -1,5 +1,8 @@
 import profile_background from './assets/plataforma_fundo1.png'
 
+import ProgressBar from 'react-bootstrap/ProgressBar';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 import './App.css'
 import { useState } from 'react'
 
@@ -47,9 +50,18 @@ function App() {
                             </div>
                         </div>
                         <div className="mooc">
-                            <progress className="progress" value="70" max="100" />
+                            <ProgressBar striped variant="success" now={70} />
 
-                            <div className="moocs">
+                            <div className="modules">
+                                <div className="module_one">
+
+                                </div>
+                                <div className="module_two">
+
+                                </div>
+                                <div className="module_three">
+
+                                </div>
                             </div>
                         </div>
                     </div>
