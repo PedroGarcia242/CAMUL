@@ -11,9 +11,7 @@ const Profile = () => {
     const navigate = useNavigate();
 
     const handleModuleOneClick = () => {
-        console.log('Div clicked!');
         navigate('/');
-        // Add your custom logic here
     };
 
     return (
@@ -37,7 +35,7 @@ const Profile = () => {
 
                         <div className="modules">
                             <div className="module_one">
-                                <div className="module_one_banner" onClick={handleModuleOneClick()}/>
+                                <div className="module_one_banner" onClick={handleModuleOneClick}/>
                                 <div className="module_one_details"/>
                             </div>
 

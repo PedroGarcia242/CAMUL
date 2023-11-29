@@ -10,7 +10,7 @@ function App() {
 
     const HomePage = () => <Home />;
     const InfoPage = () => <Info />;
-    const ProfilePage = () => <Profile/>;
+    const ProfilePage = () => <Profile />;
 
     //FUNCTIONS
     //navbar
@@ -45,9 +45,9 @@ function App() {
             <Router>
                 {displayNavbar()}
                 <Routes>
-                    <Route path="/" element={<HomePage /> } />
-                    <Route path="/info" element={ <InfoPage/> } />
-                    <Route path="/profile" element={<ProfilePage/>} />
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/info" element={ <InfoPage /> } />
+                    <Route path="/profile" element={<ProfilePage />} />
                 </Routes>
                 {displayFooter()}
             </Router>
