@@ -1,36 +1,21 @@
-import profile_background from './assets/plataforma_fundo1.png'
-
 import ProgressBar from 'react-bootstrap/ProgressBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+
+import profile_background from './assets/plataforma_fundo1.png'
 
 import './App.css'
-import { useState } from 'react'
 
-//definition of possible pages
-const Pages = { HOME: "HOME", INFO: "INFO", TICKETS: "TICKETS" }
-
-//THIS IS CURRENTLY A ONE PAGE APP, WE CAN CHANGE IT LATER
 function App() {
-    //create a variable, assign a value
-    const [currentPage, setCurrentPage] = useState(Pages.HOME);
+
+    const Home = () => displayTicketsPage();
+    const About = () => displayInfoPage();
+    const Profile = () => displayProfilePage();
 
     //FUNCTIONS
-    
-    //displays the content of the currently selected page
-    const displayPage = () => {
-        //check currentPage
-        switch (currentPage) {
-            case Pages.INFO: //if currentPage == Pages.INFO 
-                return displayInfoPage(); //display InfoPage content
-            case Pages.TICKETS: //if currentPage == Pages.Tickets 
-                return displayTicketsPage(); //display TicketsPage content
-            default: //else 
-                return displayHomePage(); //display HomePage content
-        }
-    }
 
     //home Page content
-    const displayHomePage = () => {
+    const displayProfilePage = () => {
         //returns ONE html element
         return (
             //create one element and put the desired html inside
@@ -92,39 +77,44 @@ function App() {
         )
     }
 
+    //navbar
+    const displayNavbar = () => {
+        return (
+            <>
+                <nav className="navbar">
+                    <li className="text-button"><Link to="/">HOME</Link></li>
+                    <ul className="navbar-items">
+                        <li className="text-button"><Link to="/profile">PROFILE</Link></li>
+                        <li className="text-button"><Link to="/about">ABOUT</Link></li>
+                    </ul>
+                </nav>
+            </>
+        )
+    }
+
+    //footer
+    const displayFooter = () => {
+        return (
+            <>
+                <div className="footer">
+                </div>
+            </>
+        )
+    }
+
     //RETURN
     //the base content of the page
     return (
         <>
-            <div className="navbar">
-                <h1 className="text-button" onClick={() => {
-                    setCurrentPage(Pages.HOME)
-                    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-                }}>
-                    HOME
-                </h1>
-
-                <div className="navbar-items">
-                    <p className="text-button" onClick={() => {
-                        setCurrentPage(Pages.INFO)
-                        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-                    }}>
-                        PROFILE
-                    </p>
-
-                    <p className="text-button" onClick={() => {
-                        setCurrentPage(Pages.TICKETS)
-                        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-                    }}>
-                        MENU
-                    </p>
-                </div>
-            </div>
-
-            {displayPage()}
-
-            <div className="footer">
-            </div>
+            <Router>
+                {displayNavbar()}
+                <Routes>
+                    <Route path="/" element={ <Home/> } />
+                    <Route path="/about" element={ <About/> } />
+                    <Route path="/profile" element={ <Profile/> } />
+                </Routes>
+                {displayFooter()}
+            </Router>
         </>
     )
 }
