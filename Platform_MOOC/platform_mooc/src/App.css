@@ -180,7 +180,7 @@
     margin-top: 15px;
     display: flex;
     width: 300px;
-    height: 430px;
+    height: 445px;
     background: #FFFFEE;
     flex-direction: column;
     justify-content: space-between;
@@ -215,7 +215,7 @@
     display: flex;
     background: #FFFFEE;
     border-radius: 35px;
-    height: 465px;
+    height: 480px;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
     flex-direction: row;
     justify-content: space-between;
