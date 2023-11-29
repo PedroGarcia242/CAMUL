@@ -1,82 +1,18 @@
-import ProgressBar from 'react-bootstrap/ProgressBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
-import profile_background from './assets/plataforma_fundo1.png'
-
 import './App.css'
+import Home from './views/Home';
+import Info from './views/Info';
+import Profile from './views/Profile';
 
 function App() {
 
-    const Home = () => displayTicketsPage();
-    const About = () => displayInfoPage();
-    const Profile = () => displayProfilePage();
+    const HomePage = () => <Home />;
+    const InfoPage = () => <Info />;
+    const ProfilePage = () => <Profile/>;
 
     //FUNCTIONS
-
-    //home Page content
-    const displayProfilePage = () => {
-        //returns ONE html element
-        return (
-            //create one element and put the desired html inside
-            <>
-                <div className="content">
-                    <img className="background" src={profile_background} alt=""/>
-                    <div className="banner"/>
-
-                    <div className="group">
-                        <div className="profile">
-                            <div className="picture"/>
-
-                            <div className="about">
-                                <h2>About Me</h2>
-
-                                <div className="square"/>
-                            </div>
-                        </div>
-                        <div className="mooc">
-                            <ProgressBar striped variant="success" now={70} />
-
-                            <div className="modules">
-                                <div className="module_one">
-
-                                </div>
-                                <div className="module_two">
-
-                                </div>
-                                <div className="module_three">
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </>
-        )
-    }
-
-    //info Page content
-    const displayInfoPage = () => {
-        return (
-            <>
-                <div className="info">
-                    <p>Info</p>
-                </div>
-            </>
-        )
-    }
-
-    //tickets Page content
-    const displayTicketsPage = () => {
-        return (
-            <>
-                <div className="info {currentPage == Pages.TICKETS ? 'fadeIn' : 'fadeOut'}">
-                    <p>Tickets</p>
-                </div>
-            </>
-        )
-    }
-
     //navbar
     const displayNavbar = () => {
         return (
@@ -85,7 +21,7 @@ function App() {
                     <li className="text-button"><Link to="/">HOME</Link></li>
                     <ul className="navbar-items">
                         <li className="text-button"><Link to="/profile">PROFILE</Link></li>
-                        <li className="text-button"><Link to="/about">ABOUT</Link></li>
+                        <li className="text-button"><Link to="/info">INFO</Link></li>
                     </ul>
                 </nav>
             </>
@@ -109,9 +45,9 @@ function App() {
             <Router>
                 {displayNavbar()}
                 <Routes>
-                    <Route path="/" element={ <Home/> } />
-                    <Route path="/about" element={ <About/> } />
-                    <Route path="/profile" element={ <Profile/> } />
+                    <Route path="/" element={<HomePage /> } />
+                    <Route path="/info" element={ <InfoPage/> } />
+                    <Route path="/profile" element={<ProfilePage/>} />
                 </Routes>
                 {displayFooter()}
             </Router>
