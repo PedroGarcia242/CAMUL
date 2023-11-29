@@ -102,22 +102,65 @@
 }
 
 .module_one {
-    width: 30%;
+    display: flex;
+    width: 32%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.module_one_banner {
+    background: #235939;
+    border-radius: 23px;
+    height: 68%;
+}
+
+    .module_one_banner:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+        border-radius: 30px;
+    }
+
+.module_one_details {
     background: #EEEEEE;
     border-radius: 23px;
-    height: 300px;
+    height: 28%;
 }
 
 .module_two {
-    width: 30%;
-    background: #EEEEEE;
-    border-radius: 23px;
-    height: 300px;
+    display: flex;
+    width: 32%;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.module_three {
-    width: 30%;
+.module_two_banner {
     background: #EEEEEE;
     border-radius: 23px;
-    height: 300px;
+    height: 68%;
+}
+
+.module_two_details {
+    background: #EEEEEE;
+    border-radius: 23px;
+    height: 28%;
+}
+
+
+.module_three {
+    display: flex;
+    width: 32%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.module_three_banner {
+    background: #EEEEEE;
+    border-radius: 23px;
+    height: 68%;
+}
+
+.module_three_details {
+    background: #EEEEEE;
+    border-radius: 23px;
+    height: 28%;
 }
