@@ -2,15 +2,18 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 import './App.css'
+
 import Home from './views/Home';
 import Info from './views/Info';
 import Profile from './views/Profile';
+import ModuleOne from './views/moduleOne/ModuleOne';
 
 function App() {
 
     const HomePage = () => <Home />;
     const InfoPage = () => <Info />;
     const ProfilePage = () => <Profile />;
+    const ModuleOnePage = () => <ModuleOne />;
 
     //FUNCTIONS
     //navbar
@@ -28,16 +31,6 @@ function App() {
         )
     }
 
-    //footer
-    const displayFooter = () => {
-        return (
-            <>
-                <div className="footer">
-                </div>
-            </>
-        )
-    }
-
     //RETURN
     //the base content of the page
     return (
@@ -46,10 +39,10 @@ function App() {
                 {displayNavbar()}
                 <Routes>
                     <Route path="/" element={<HomePage />} />
-                    <Route path="/info" element={ <InfoPage /> } />
-                    <Route path="/profile" element={<ProfilePage />} />
+                    <Route path="/Info" element={ <InfoPage /> } />
+                    <Route path="/Profile" element={<ProfilePage />} />
+                    <Route path="/ModuleOne" element={<ModuleOnePage />} />
                 </Routes>
-                {displayFooter()}
             </Router>
         </>
     )

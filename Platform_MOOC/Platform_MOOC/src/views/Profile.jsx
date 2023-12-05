@@ -2,21 +2,28 @@ import ProgressBar from 'react-bootstrap/ProgressBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useNavigate } from 'react-router-dom';
 
-import profile_background from '../assets/plataforma_fundo1.png';
-
-import './Profile.css';
-import '../App.css';
+import profile_background from '../assets/profile_bg.png';
 
 const Profile = () => {
     const navigate = useNavigate();
 
     const handleModuleOneClick = () => {
-        navigate('/');
+        navigate('/ModuleOne');
     };
+
+    //footer
+    const displayFooter = () => {
+        return (
+            <>
+                <div className="footer-profile">
+                </div>
+            </>
+        )
+    }
 
     return (
         <>
-            <div className="content">
+            <div className="content-profile">
                 <img className="background" src={profile_background} alt="" />
                 <div className="banner" />
 
@@ -52,6 +59,7 @@ const Profile = () => {
                     </div>
                 </div>
             </div>
+            {displayFooter()}
         </>
     );
 };
