@@ -99,11 +99,11 @@ const ModuleOne = () => {
                 </div>
 
                 <div className="chapter-description">
-                    <div className="chapter-description-background" >
+                    <div className="chapter-description-header" >
                         <h1>CHAPTER 1: Introduction to Communication and Marketing</h1>
                     </div>
-                    <div className="chapter-description-background-hole" >
-                        <h1> &gt; Lesson 1: Introduction to Communication and Marketing </h1>
+                    <div className="chapter-description-content" >
+                        <h1 className="module-one-selected-chapter"> &gt; Lesson 1: Introduction to Communication and Marketing </h1>
                         <h1> &gt; Lesson 2: Consumer Psychology </h1>
                         <h1> &gt; Lesson 3: Market Research Methods and Tendencies</h1>
                         <h1> &gt; Lesson 4: Media Planning</h1>
