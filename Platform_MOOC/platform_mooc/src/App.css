@@ -67,7 +67,7 @@ li {
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
-    background: #ffffee;
+    background: #ffffff;
     user-select: none;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -98,7 +98,7 @@ li {
     }
 
 .footer-profile, .footer-module-one {
-    position: fixed;
+    position: static;
     width: 100%;
     bottom: 0;
     z-index: 1000;
@@ -128,7 +128,7 @@ li {
     }
 
     .footer p {
-        color: #ffffee;
+        color: #ffffff;
         font-size: 30px;
         margin: 0;
     }
@@ -189,8 +189,8 @@ li {
 
 .content-module-one {
     position: relative;
-    background-image: linear-gradient(#0E2417, #d1caa1);
-    height: 3000px;
+    background-image: linear-gradient(#0E2417, #374530);
+    height: 2200px;
 }
 
 .background {
@@ -211,7 +211,7 @@ li {
     margin-left: 8%;
     margin-right: 8%;
     height: 300px;
-    background: #FFFFEE;
+    background: #ffffff;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -251,7 +251,7 @@ li {
     display: flex;
     width: 300px;
     height: 445px;
-    background: #FFFFEE;
+    background: #ffffff;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -284,7 +284,7 @@ li {
 .modules {
     padding: 15px;
     display: flex;
-    background: #FFFFEE;
+    background: #ffffff;
     border-radius: 35px;
     height: 480px;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
@@ -365,57 +365,91 @@ li {
 
     .video-container iframe {
         position: absolute;
-        top: 25%;
-        width: 83%;
-        height: 83%;
+        top: 14%;
+        width: 70%;
+        height: 70%;
     }
     .video-container .video-background {
         position: absolute;
-        top: 23%;
-        width: 85%;
-        height: 87%;
+        top: 12%;
+        width: 72%;
+        height: 74%;
         background: #0E2417;
+        border-radius: 10px;
     }
 
 .video-description {
     position: relative;
-    margin-top: 200px;
-    height: 170px;
+    margin-top: -30px;
     display: flex;
     justify-content: center;
     align-items: center;
+    background: #0E2417;
+    flex-direction: column;
 }
 
-    .video-description .video-description-background {
-        position: absolute;
-        width: 75%;
-        height: 100%;
-        background: #ffffee;
+    .video-description h1 {
+        position: relative;
+        margin-top: 25px;
+        font-size: 40px;
+        color: #ffffee;
+        font-weight: bold;
     }
 
-.video-description-background h1 {
+.card {
+    margin: 20px;
+    margin-bottom: 50px;
+    background: #fafaeaee;
+    height: 400px;
+    width: 300px;
+}
+
+    .card:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+    }
+
+.card-img {
+    padding: 10px;
     position: absolute;
-    top: 15px;
-    left: 20px;
-    font-size: 40px;
-    color: #0E2417;
-    font-weight: bold;
+    top: 0;
 }
 
-    .video-description .video-description-background-hole {
-        position: absolute;
-        top: 75px;
-        width: 74.5%;
-        height: 90px;
-        background: #0E2417;
+.card-content {
+    display: flex;
+    border-bottom-left-radius: 3px;
+    padding: 10px;
+    border-bottom-right-radius: 3px;
+    position: absolute;
+    top: 170px;
+    background: #ffffee;
+    bottom: 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+    flex-direction: column;
+    justify-content: flex-start;
+}
+    .card-content h1 {
+        color: #0E2417;
+        padding-bottom: 10px;
     }
+    .card-content h4 {
+        color: #0E2417;
+    }
+
+.video-description-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
 
 .video-description-background-hole h1 {
     position: absolute;
     top: 25px;
     left: 40px;
     font-size: 35px;
-    color: #ffffee;
+    color: #ffffff;
     font-weight: bold;
 }
 
@@ -440,7 +474,7 @@ li {
     top: 15px;
     left: 20px;
     font-size: 40px; 
-    color: #ffffee;
+    color: #ffffff;
     font-weight: bold;
 }
 
@@ -449,7 +483,7 @@ li {
     top: 75px;
     width: 74.5%;
     height: 83%;
-    background: #ffffee;
+    background: #ffffff;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
