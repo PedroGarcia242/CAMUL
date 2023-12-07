@@ -1,0 +1,20 @@
+.custom-button {
+    width: 565px;
+    height: 154px;
+    background-color: #B16161;
+    border: 2px solid #FFFFFF;
+    border-radius: 15px; /* Adjust the border-radius for rounded edges */
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 154px; /* Center text vertically */
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.2s ease-in-out;
+}
+
+    /* Zoom effect on hover */
+    .custom-button:hover {
+        transform: scale(1.05);
+    }
