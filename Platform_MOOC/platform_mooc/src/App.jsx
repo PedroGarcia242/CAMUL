@@ -14,7 +14,7 @@ function App() {
     const InfoPage = () => <Info />;
     const ProfilePage = () => <Profile />;
     const ModuleOnePage = () => <ModuleOne />;
-
+    
     //FUNCTIONS
     //navbar
     const displayNavbar = () => {
