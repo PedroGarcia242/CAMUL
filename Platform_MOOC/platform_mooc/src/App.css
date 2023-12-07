@@ -188,12 +188,15 @@ li {
 }
 
 .content-module-one {
-    overflow: hidden;
-    height: 100vh;
+    position: relative;
     background-image: linear-gradient(#0E2417, #d1caa1);
+    height: 3000px;
 }
 
 .background {
+    position: absolute;
+    top: 0;
+    left: 0;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -333,7 +336,6 @@ li {
     height: 28%;
 }
 
-
 .module_three {
     display: flex;
     width: 32%;
@@ -354,16 +356,111 @@ li {
 }
 
 .video-container {
-    position: absolute;
-    top: 100px;
-    width: 100%;
-    padding-bottom: 56.25%; /* Maintain a 16:9 aspect ratio */
+    position: relative;
+    padding-bottom: 56.25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
     .video-container iframe {
         position: absolute;
-        width: 70%;
-        height: 70%;
-        top: 0;
-        left: 0;
+        top: 25%;
+        width: 83%;
+        height: 83%;
     }
+    .video-container .video-background {
+        position: absolute;
+        top: 23%;
+        width: 85%;
+        height: 87%;
+        background: #0E2417;
+    }
+
+.video-description {
+    position: relative;
+    margin-top: 200px;
+    height: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .video-description .video-description-background {
+        position: absolute;
+        width: 75%;
+        height: 100%;
+        background: #ffffee;
+    }
+
+.video-description-background h1 {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    font-size: 40px;
+    color: #0E2417;
+    font-weight: bold;
+}
+
+    .video-description .video-description-background-hole {
+        position: absolute;
+        top: 75px;
+        width: 74.5%;
+        height: 90px;
+        background: #0E2417;
+    }
+
+.video-description-background-hole h1 {
+    position: absolute;
+    top: 25px;
+    left: 40px;
+    font-size: 35px;
+    color: #ffffee;
+    font-weight: bold;
+}
+
+.chapter-description {
+    position: relative;
+    margin-top: 100px;
+    height: 480px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .chapter-description .chapter-description-background {
+        position: absolute;
+        width: 75%;
+        height: 100%;
+        background: #0E2417;
+    }
+
+.chapter-description-background h1 {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    font-size: 40px; 
+    color: #ffffee;
+    font-weight: bold;
+}
+
+.chapter-description .chapter-description-background-hole {
+    position: absolute;
+    top: 75px;
+    width: 74.5%;
+    height: 83%;
+    background: #ffffee;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.chapter-description-background-hole h1 {
+    position: relative;
+    margin-top: 25px;
+    left: 40px;
+    font-size: 35px;
+    color: #0E2417;
+    font-weight: bold;
+}
