@@ -9,8 +9,21 @@ import quizImage from '../../assets/quizImage.png';
 const ModuleOne = () => {
     const navigate = useNavigate();
 
-    const handleModuleOneClick = () => {
+    const handleNavigateClick = () => {
         navigate('/');
+    };
+
+    const handleTranscriptClick = () => {
+        const url = 'https://myisepipp-my.sharepoint.com/:b:/g/personal/1190956_isep_ipp_pt/Ef3iEo1EdklHugWWjvzotMsB2q5YDCWaZLph02xvpZU9YQ';
+        window.open(url, '_blank');
+    };
+    const handleYoutubeClick = () => {
+        const url = 'https://www.youtube.com/watch?v=5V5QDihsihY';
+        window.open(url, '_blank');
+    };
+    const handleQuizClick = () => {
+        const url = 'https://docs.google.com/forms/d/e/1FAIpQLSdqUsUVb7jxBc2lQHWOOcr4iRhPGNOl42dE1M36NvaIfGLD7w/viewform';
+        window.open(url, '_blank');
     };
 
     //footer
@@ -26,7 +39,7 @@ const ModuleOne = () => {
     const transcriptCard = () => {
         return (
             <>
-                <div className="card">
+                <div className="card" onClick={handleTranscriptClick}>
                     <img className="card-img" src={transcriptImage} alt="transcript" />
                     <div className="card-content">
                         <h1 className="card-title">
@@ -44,14 +57,14 @@ const ModuleOne = () => {
     const youtubeCard = () => {
         return (
             <>
-                <div className="card">
+                <div className="card" onClick={handleYoutubeClick} >
                     <img className="card-img" src={youtubeImage} alt="youtube" style={{ top: -40 + 'px'}} />
                     <div className="card-content">
                         <h1 className="card-title">
                             Youtube
                         </h1>
                         <h4 className="card-text">
-                            Here you can the original video for this lesson.
+                            Here you can watch the original video for this lesson.
                         </h4>
                     </div>
                 </div>
@@ -62,7 +75,7 @@ const ModuleOne = () => {
     const quizCard = () => {
         return (
             <>
-                <div className="card">
+                <div className="card" onClick={handleQuizClick} >
                     <img className="card-img" src={quizImage} alt="quiz" />
                     <div className="card-content">
                         <h1 className="card-title">
@@ -82,14 +95,14 @@ const ModuleOne = () => {
             <div className="content-module-one">
                 <img className="background" src={module_one_background} alt="" />
                 <div className="video-container">
-                    <div className="video-background" />
+                    <div className="video-background-module-one" />
                     <iframe
                         src="https://www.youtube.com/embed/5V5QDihsihY"
                         frameBorder="0"
                         allowFullScreen
                     ></iframe>
                 </div>
-                <div className="video-description">
+                <div className="video-description-module-one">
                     <h1>EXTRAS</h1>
                     <div className="video-description-content">
                         {transcriptCard()}
