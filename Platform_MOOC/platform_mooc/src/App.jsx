@@ -15,12 +15,8 @@ function App() {
     const InfoPage = () => <Info />;
     const ProfilePage = () => <Profile />;
     const ModuleOnePage = () => <ModuleOne />;
-<<<<<<< Updated upstream
-    
-=======
     const ModuleTwoPage = () => <ModuleTwo />;
 
->>>>>>> Stashed changes
     //FUNCTIONS
     //navbar
     const displayNavbar = () => {
