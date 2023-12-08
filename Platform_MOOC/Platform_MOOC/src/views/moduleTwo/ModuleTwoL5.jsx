@@ -24,10 +24,14 @@ const ModuleTwoL5 = () => {
     const handleModuleTwoL5Click = () => {
         navigate('/');
     };
-
     const handleModuleTwoQuizL5Click = () => {
         navigate('/ModuleTwoQuizL5');
     };
+    const goToYoutubeL5 = () => {
+        window.location.href = 'https://youtu.be/hwwSeFGn1Og?feature=shared';
+    };
+
+
     //footer
     const displayFooter = () => {
         return (
@@ -59,7 +63,7 @@ const ModuleTwoL5 = () => {
     const youtubeCard = () => {
         return (
             <>
-                <div className="card">
+                <div className="card" onClick={goToYoutubeL5}>
                     <img className="card-img" src={youtubeImage} alt="youtube" style={{ top: -40 + 'px' }} />
                     <div className="card-content">
                         <h1 className="card-title">
