@@ -7,6 +7,7 @@ import Home from './views/Home';
 import Info from './views/Info';
 import Profile from './views/Profile';
 import ModuleOne from './views/moduleOne/ModuleOne';
+import ModuleTwo from './views/moduleTwo/ModuleTwo';
 
 function App() {
 
@@ -14,7 +15,12 @@ function App() {
     const InfoPage = () => <Info />;
     const ProfilePage = () => <Profile />;
     const ModuleOnePage = () => <ModuleOne />;
+<<<<<<< Updated upstream
     
+=======
+    const ModuleTwoPage = () => <ModuleTwo />;
+
+>>>>>>> Stashed changes
     //FUNCTIONS
     //navbar
     const displayNavbar = () => {
@@ -42,6 +48,7 @@ function App() {
                     <Route path="/Info" element={ <InfoPage /> } />
                     <Route path="/Profile" element={<ProfilePage />} />
                     <Route path="/ModuleOne" element={<ModuleOnePage />} />
+                    <Route path="/ModuleTwo" element={<ModuleTwoPage />} />
                 </Routes>
             </Router>
         </>

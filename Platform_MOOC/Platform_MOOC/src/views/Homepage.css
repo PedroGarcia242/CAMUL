@@ -1,20 +1,22 @@
-.custom-button {
-    width: 565px;
-    height: 154px;
+.contents-button {
+    width: 200px;
+    height: 50px;
     background-color: #B16161;
-    border: 2px solid #FFFFFF;
-    border-radius: 15px; /* Adjust the border-radius for rounded edges */
+    border: 5px solid #FFFFFF;
+    border-radius: 25px; /* Adjust the border-radius for rounded edges */
     color: #FFFFFF;
     font-size: 16px;
     font-weight: bold;
     text-align: center;
-    line-height: 154px; /* Center text vertically */
+    line-height: 40px; /* Center text vertically */
     text-decoration: none;
     display: inline-block;
+    margin-top: 400px;
     transition: transform 0.2s ease-in-out;
 }
 
     /* Zoom effect on hover */
-    .custom-button:hover {
+    .contents-button:hover {
         transform: scale(1.05);
+        box-shadow: 0 0 10px 10px #b1616171;
     }
