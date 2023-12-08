@@ -11,8 +11,8 @@ const Profile = () => {
         navigate('/ModuleOne');
     };
 
-    const handleModuleTwoClick = () => {
-        navigate('/ModuleTwo');
+    const handleModuleTwoL1Click = () => {
+        navigate('/ModuleTwoL1');
     };
 
     //footer
@@ -51,7 +51,7 @@ const Profile = () => {
                             </div>
 
                             <div className="module_two">
-                                <div className="module_two_banner" onClick={handleModuleTwoClick} />
+                                <div className="module_two_banner" onClick={handleModuleTwoL1Click} />
                                 <div className="module_two_details" />
                             </div>
 

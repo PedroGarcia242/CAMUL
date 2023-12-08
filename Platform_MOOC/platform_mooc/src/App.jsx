@@ -7,7 +7,16 @@ import Home from './views/Home';
 import Info from './views/Info';
 import Profile from './views/Profile';
 import ModuleOne from './views/moduleOne/ModuleOne';
-import ModuleTwo from './views/moduleTwo/ModuleTwo';
+import ModuleTwoL1 from './views/moduleTwo/ModuleTwoL1';
+import ModuleTwoL2 from './views/moduleTwo/ModuleTwoL2';
+import ModuleTwoL3 from './views/moduleTwo/ModuleTwoL3';
+import ModuleTwoL4 from './views/moduleTwo/ModuleTwoL4';
+import ModuleTwoL5 from './views/moduleTwo/ModuleTwoL5';
+import ModuleTwoQuizL1 from './views/moduleTwo/ModuleTwoQuizL1';
+import ModuleTwoQuizL2 from './views/moduleTwo/ModuleTwoQuizL2';
+import ModuleTwoQuizL3 from './views/moduleTwo/ModuleTwoQuizL3';
+import ModuleTwoQuizL4 from './views/moduleTwo/ModuleTwoQuizL4';
+import ModuleTwoQuizL5 from './views/moduleTwo/ModuleTwoQuizL5';
 
 function App() {
 
@@ -15,7 +24,17 @@ function App() {
     const InfoPage = () => <Info />;
     const ProfilePage = () => <Profile />;
     const ModuleOnePage = () => <ModuleOne />;
-    const ModuleTwoPage = () => <ModuleTwo />;
+    const ModuleTwoL1Page = () => <ModuleTwoL1 />;
+    const ModuleTwoL2Page = () => <ModuleTwoL2 />;
+    const ModuleTwoL3Page = () => <ModuleTwoL3 />;
+    const ModuleTwoL4Page = () => <ModuleTwoL4 />;
+    const ModuleTwoL5Page = () => <ModuleTwoL5 />;
+    const ModuleTwoQuizL1Page = () => <ModuleTwoQuizL1 />;
+
+    const ModuleTwoQuizL2Page = () => <ModuleTwoQuizL2 />;
+    const ModuleTwoQuizL3Page = () => <ModuleTwoQuizL3 />;
+    const ModuleTwoQuizL4Page = () => <ModuleTwoQuizL4 />;
+    const ModuleTwoQuizL5Page = () => <ModuleTwoQuizL5 />;
 
     //FUNCTIONS
     //navbar
@@ -44,7 +63,16 @@ function App() {
                     <Route path="/Info" element={ <InfoPage /> } />
                     <Route path="/Profile" element={<ProfilePage />} />
                     <Route path="/ModuleOne" element={<ModuleOnePage />} />
-                    <Route path="/ModuleTwo" element={<ModuleTwoPage />} />
+                    <Route path="/ModuleTwoL1" element={<ModuleTwoL1Page />} />
+                    <Route path="/ModuleTwoL2" element={<ModuleTwoL2Page />} />
+                    <Route path="/ModuleTwoL3" element={<ModuleTwoL3Page />} />
+                    <Route path="/ModuleTwoL4" element={<ModuleTwoL4Page />} />
+                    <Route path="/ModuleTwoL5" element={<ModuleTwoL5Page />} />
+                    <Route path="/ModuleTwoQuizL1" element={<ModuleTwoQuizL1Page />} />
+                    <Route path="/ModuleTwoQuizL2" element={<ModuleTwoQuizL2Page />} />
+                    <Route path="/ModuleTwoQuizL3" element={<ModuleTwoQuizL3Page />} />
+                    <Route path="/ModuleTwoQuizL4" element={<ModuleTwoQuizL4Page />} />
+                    <Route path="/ModuleTwoQuizL5" element={<ModuleTwoQuizL5Page />} />
                 </Routes>
             </Router>
         </>
