@@ -20,6 +20,8 @@ import ModuleTwoQuizL3 from './views/moduleTwo/ModuleTwoQuizL3';
 import ModuleTwoQuizL4 from './views/moduleTwo/ModuleTwoQuizL4';
 import ModuleTwoQuizL5 from './views/moduleTwo/ModuleTwoQuizL5';
 
+import ModuleThree from './views/moduleThree/ModuleThree';
+
 function App() {
 
     const HomePage = () => <Home />;
@@ -39,6 +41,8 @@ function App() {
     const ModuleTwoQuizL3Page = () => <ModuleTwoQuizL3 />;
     const ModuleTwoQuizL4Page = () => <ModuleTwoQuizL4 />;
     const ModuleTwoQuizL5Page = () => <ModuleTwoQuizL5 />;
+
+    const ModuleThreePage = () => <ModuleThree />;
 
     //FUNCTIONS
     //navbar
@@ -80,6 +84,8 @@ function App() {
                     <Route path="/ModuleTwoQuizL3" element={<ModuleTwoQuizL3Page />} />
                     <Route path="/ModuleTwoQuizL4" element={<ModuleTwoQuizL4Page />} />
                     <Route path="/ModuleTwoQuizL5" element={<ModuleTwoQuizL5Page />} />
+
+                    <Route path="/ModuleThree/:currentLessonNumber" element={<ModuleThreePage />} />
                 </Routes>
             </Router>
         </>
