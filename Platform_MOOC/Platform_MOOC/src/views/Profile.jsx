@@ -8,7 +8,7 @@ const Profile = () => {
     const navigate = useNavigate();
 
     const handleModuleOneClick = () => {
-        navigate('/ModuleOne');
+        navigate('/ModuleOne/1');
     };
 
     const handleModuleTwoL1Click = () => {

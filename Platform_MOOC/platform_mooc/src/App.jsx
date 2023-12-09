@@ -6,7 +6,9 @@ import './App.css'
 import Home from './views/Home';
 import Info from './views/Info';
 import Profile from './views/Profile';
-import ModuleOne from './views/moduleOne/ModuleOne';
+
+import ModuleOne from './views/moduleOne/ModuleOne';    
+
 import ModuleTwoL1 from './views/moduleTwo/ModuleTwoL1';
 import ModuleTwoL2 from './views/moduleTwo/ModuleTwoL2';
 import ModuleTwoL3 from './views/moduleTwo/ModuleTwoL3';
@@ -23,7 +25,9 @@ function App() {
     const HomePage = () => <Home />;
     const InfoPage = () => <Info />;
     const ProfilePage = () => <Profile />;
+
     const ModuleOnePage = () => <ModuleOne />;
+
     const ModuleTwoL1Page = () => <ModuleTwoL1 />;
     const ModuleTwoL2Page = () => <ModuleTwoL2 />;
     const ModuleTwoL3Page = () => <ModuleTwoL3 />;
@@ -62,7 +66,10 @@ function App() {
                     <Route path="/" element={<HomePage />} />
                     <Route path="/Info" element={ <InfoPage /> } />
                     <Route path="/Profile" element={<ProfilePage />} />
-                    <Route path="/ModuleOne" element={<ModuleOnePage />} />
+
+                    <Route path="/ModuleOne/:currentLessonNumber" element={<ModuleOnePage />} />
+
+
                     <Route path="/ModuleTwoL1" element={<ModuleTwoL1Page />} />
                     <Route path="/ModuleTwoL2" element={<ModuleTwoL2Page />} />
                     <Route path="/ModuleTwoL3" element={<ModuleTwoL3Page />} />
