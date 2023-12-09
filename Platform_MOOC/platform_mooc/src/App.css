@@ -396,15 +396,36 @@ li {
         top: 14%;
         width: 70%;
         height: 70%;
+        border-radius: 10px;
     }
     .video-container .video-background-module-one {
+        display: flex;
         position: absolute;
         top: 12%;
-        width: 72%;
+        width: 80%;
         height: 74%;
         background: #0E2417;
         border-radius: 10px;
+        justify-content: space-between;
+        align-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        padding: 1%;
     }
+
+.video-background-module-one h1 {
+    height: 100%;
+    width: 4%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffee;
+    transform: scale(1.4);
+}
+        .video-background-module-one h1:hover {
+            cursor: pointer;
+            transform: scale(1.8);
+        }
 
 .video-description-module-one {
     position: relative;

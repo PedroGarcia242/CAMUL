@@ -8,11 +8,34 @@ import quizImage from '../../assets/quizImage.png';
 
 const ModuleOne = () => {
     const navigate = useNavigate();
-    const { currentLessonNumber } = useParams();
+    var { currentLessonNumber } = useParams();
+    if (currentLessonNumber !== '1' &&
+        currentLessonNumber !== '2' &&
+        currentLessonNumber !== '3' &&
+        currentLessonNumber !== '4' &&
+        currentLessonNumber !== '5') {
+        currentLessonNumber = '1';
+        }
 
     const handleNavigateClick = (lessonNumber) => {
         navigate('/ModuleOne/' + lessonNumber);
         window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    const handleNextLessonClick = () => {
+        var nextLesson = + currentLessonNumber + 1;
+        if (nextLesson > 5) {
+            nextLesson = 1;
+        }
+        handleNavigateClick(nextLesson);
+    };
+
+    const handlePreviousLessonClick = () => {
+        var previousLesson = + currentLessonNumber - 1;
+        if (previousLesson < 1) {
+            previousLesson = 5;
+        }
+        handleNavigateClick(previousLesson);
     };
 
     const handleTranscriptClick = () => {
@@ -85,7 +108,10 @@ const ModuleOne = () => {
         }
         return (
             <>
-                <div className="video-background-module-one" />
+                <div className="video-background-module-one" >
+                    <h1 onClick={handlePreviousLessonClick} >{'<'}</h1>
+                    <h1 onClick={handleNextLessonClick} >{'>'}</h1>
+                </div>
                 <iframe
                     src={videoUrl}
                     frameBorder="0"
@@ -95,7 +121,6 @@ const ModuleOne = () => {
         )
     }
 
-    //footer
     const displayFooter = () => {
         return (
             <>
