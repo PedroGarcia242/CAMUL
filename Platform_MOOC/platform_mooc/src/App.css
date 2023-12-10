@@ -100,7 +100,8 @@ li {
 .footer-profile,
 .footer-module-one,
 .footer-module-two,
-.footer-module-three {
+.footer-module-three,
+.footer-info-page {
     position: static;
     width: 100%;
     bottom: 0;
@@ -126,6 +127,10 @@ li {
 }
 
 .footer-module-three {
+    background: #32213a;
+}
+
+.footer-info-page {
     background: #32213a;
 }
 
@@ -208,6 +213,11 @@ li {
     height: 3000px;
 }
 .content-module-three {
+    position: relative;
+    background-image: linear-gradient(#32213a, #5B4F5A);
+}
+
+.content-info-page {
     position: relative;
     background-image: linear-gradient(#32213a, #5B4F5A);
 }
@@ -460,6 +470,40 @@ li {
 }
 
     .video-description-module-three h1 {
+        position: relative;
+        margin-top: 25px;
+        font-size: 40px;
+        color: #ffffee;
+        font-weight: bold;
+    }
+
+
+.video-background-info-page h1 {
+    height: 100%;
+    width: 4%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffee;
+    transform: scale(1.4);
+}
+
+    .video-background-info-page h1:hover {
+        cursor: pointer;
+        transform: scale(1.8);
+    }
+
+.video-description-info-page {
+    position: relative;
+    margin-top: -30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #32213A;
+    flex-direction: column;
+}
+
+    .video-description-info-page h1 {
         position: relative;
         margin-top: 25px;
         font-size: 40px;
