@@ -5,6 +5,7 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
+import Accordion from 'react-bootstrap/Accordion';
 
 import homeBackground from '../assets/home.png';
 
@@ -93,8 +94,8 @@ const Home = () => {
             <>
                 <div className="lesson-content">
                     <h5 className="mb-3">Lesson 1: Basics of Communication and Marketing (IMC)</h5>
-                    <h6>Objective: Understand what is the strategic approach of IMC and the necessity of Communication in the Marketing field.</h6>
-                    <h6>Chapters: Introduction to Communication and Marketing; The IMC - Integrated Marketing Communications </h6>
+                    <h6> - Objective: Understand what is the strategic approach of IMC and the necessity of Communication in the Marketing field</h6>
+                    <h6> - Chapters: Introduction to Communication and Marketing; The IMC - Integrated Marketing Communications </h6>
                 </div>
             </>
         )
@@ -105,8 +106,8 @@ const Home = () => {
             <>
                 <div className="lesson-content">
                     <h5 className="mb-3">Lesson 2: Consumer Psychology</h5>
-                    <h6><b>Objective:</b> Understand how the consumer behaves, such as their motivations, perceptions, buying behaviour and the psychological factors involved in decision making.</h6>
-                    <h6><b>Chapters:</b> Introduction to Communication and Marketing; The IMC - Integrated Marketing Communications </h6>
+                    <h6> - Objective: Understand how the consumer behaves, such as their motivations, perceptions, buying behaviour and the psychological factors involved in decision making</h6>
+                    <h6> - Chapters: Consumer Behavior in Marketing; Motivation in Marketing Communication; Psychological Techniques in Marketing </h6>
                 </div>
             </>
         )
@@ -116,10 +117,9 @@ const Home = () => {
         return (
             <>
                 <div className="lesson-content">
-                    <h5 className="mb-3">Lesson One: Basics of Communication and Marketing (IMC)</h5>
-                    <h6><b>Objective:</b> Understand what is the strategic approach of IMC and the necessity of Communication in the Marketing field.</h6>
-                    <h6><b>Format:</b> Video; Slides; Text</h6>
-                    <h6><b>Chapters:</b> Introduction to Communication and Marketing; The IMC - Integrated Marketing Communications </h6>
+                    <h5 className="mb-3">Lesson 3: Market Research: Methods and Tendencies</h5>
+                    <h6> - Objective: Learn about the most recent market tendencies, as well as qualitative and quantitative research methods, data analysis and interpretation</h6>
+                    <h6> - Chapters: Introduction to Market Research; Types of Market Research; Tendencies in Market Research; Integration with IMC</h6>
                 </div>
             </>
         )
@@ -129,10 +129,9 @@ const Home = () => {
         return (
             <>
                 <div className="lesson-content">
-                    <h5>Lesson One: Basics of Communication and Marketing (IMC)</h5>
-                    <h6><b>Objective:</b> Understand what is the strategic approach of IMC and the necessity of Communication in the Marketing field.</h6>
-                    <h6><b>Format:</b> Video; Slides; Text</h6>
-                    <h6><b>Chapters:</b> Introduction to Communication and Marketing; The IMC - Integrated Marketing Communications </h6>
+                    <h5 className="mb-3">Lesson 4: Media Planning</h5>
+                    <h6> - Objective: Understand the importance of media planning when it comes to reaching the target audience</h6>
+                    <h6> - Chapters: Introduction to Media Planning; Development Process of a Media Plan </h6>
                 </div>
             </>
         )
@@ -142,10 +141,9 @@ const Home = () => {
         return (
             <>
                 <div className="lesson-content">
-                    <h5>Lesson One: Basics of Communication and Marketing (IMC)</h5>
-                    <h6><b>Objective:</b> Understand what is the strategic approach of IMC and the necessity of Communication in the Marketing field.</h6>
-                    <h6><b>Format:</b> Video; Slides; Text</h6>
-                    <h6><b>Chapters:</b> Introduction to Communication and Marketing; The IMC - Integrated Marketing Communications </h6>
+                    <h5 className="mb-3">Lesson 5: Brand Loyalty and Customer Retention</h5>
+                    <h6> - Objective: Learn how to build a strong brand and strategies for customer retention and churn reduction</h6>
+                    <h6> - Chapters: Definitions; The Customer Journey; Strategies for building brand loyalty and retain customers </h6>
                 </div>
             </>
         )
@@ -156,7 +154,6 @@ const Home = () => {
             <>
                 <div className="details-module" >
                     <div className="details-module-title">
-                        <h3>Module 1</h3>
                         <h4>Essential Concepts of Integrated Marketing Communication (IMC)</h4>
                     </div>
                     <div className="details-module-content">
@@ -165,6 +162,8 @@ const Home = () => {
                             transition={false}
                             id="noanim-tab-example"
                             className="mb-3"
+                            variant="underline"
+                            fill
                         >
                             <Tab eventKey="lesson-1" title="Lesson One">
                                 {moduleOneLessonOne()}
@@ -230,8 +229,26 @@ const Home = () => {
                 <div className="module-details pt-4">
                     <h2>Module Details</h2>
                     <div className="module-details-content">
-                        {moduleOneDetails()}
-                       
+                        <Accordion defaultActiveKey="0">
+                            <Accordion.Item eventKey="0">
+                                <Accordion.Header className="module-one">Module One</Accordion.Header>
+                                <Accordion.Body>
+                                    {moduleOneDetails()}
+                                </Accordion.Body>
+                            </Accordion.Item>
+                            <Accordion.Item eventKey="1">
+                                <Accordion.Header className="module-two">Module Two</Accordion.Header>
+                                <Accordion.Body>
+                                    {moduleOneDetails()}
+                                </Accordion.Body>
+                            </Accordion.Item>
+                            <Accordion.Item eventKey="2">
+                                <Accordion.Header className="module-three">Module Three</Accordion.Header>
+                                <Accordion.Body>
+                                    {moduleOneDetails()}
+                                </Accordion.Body>
+                            </Accordion.Item>
+                        </Accordion>
                     </div>
                 </div>
             </div>
