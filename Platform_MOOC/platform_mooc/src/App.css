@@ -101,6 +101,7 @@ li {
 .footer-module-one,
 .footer-module-two,
 .footer-module-three,
+.footer-info-page,
 .footer-home-page {
     position: static;
     width: 100%;
@@ -130,6 +131,7 @@ li {
     background: #32213a;
 }
 
+.footer-info-page,
 .footer-home-page {
     background: #f0f3f6;
 }
@@ -175,6 +177,24 @@ li {
     background-image: linear-gradient(#32213a, #5B4F5A);
 }
 
+.content-info-page {
+    position: relative;
+    background: #32213a;
+    /*background-image: linear-gradient(#B8B8FF, #f5f7fa);*/
+}
+
+
+
+.search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: transparent; /* Make input background transparent */
+}
+
+
+/*.content-info-page,*/
 .content-home-page {
     position: relative;
     background: #f5f7fa;
@@ -662,10 +682,12 @@ h1.module-three-selected-chapter {
     font-weight: bold;
 }
 
+.info-header,
 .home-header {
     margin-top: 65px;
     padding-top: 40px;
 }
+.info-header h5,
 .home-header h5{
     color: #252525cc
 }
