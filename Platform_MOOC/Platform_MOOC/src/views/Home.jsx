@@ -3,9 +3,10 @@ import { useNavigate } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import Tab from 'react-bootstrap/Tab';
+import Tabs from 'react-bootstrap/Tabs';
 
 import homeBackground from '../assets/home.png';
-import transcriptImage from '../assets/transcriptImage.png';
 
 const Home = () => {
 
@@ -87,7 +88,105 @@ const Home = () => {
         )
     }
 
+    const moduleOneLessonOne = () => {
+        return (
+            <>
+                <div className="lesson-content">
+                    <h5 className="mb-3">Lesson 1: Basics of Communication and Marketing (IMC)</h5>
+                    <h6>Objective: Understand what is the strategic approach of IMC and the necessity of Communication in the Marketing field.</h6>
+                    <h6>Chapters: Introduction to Communication and Marketing; The IMC - Integrated Marketing Communications </h6>
+                </div>
+            </>
+        )
+    }
 
+    const moduleOneLessonTwo = () => {
+        return (
+            <>
+                <div className="lesson-content">
+                    <h5 className="mb-3">Lesson 2: Consumer Psychology</h5>
+                    <h6><b>Objective:</b> Understand how the consumer behaves, such as their motivations, perceptions, buying behaviour and the psychological factors involved in decision making.</h6>
+                    <h6><b>Chapters:</b> Introduction to Communication and Marketing; The IMC - Integrated Marketing Communications </h6>
+                </div>
+            </>
+        )
+    }
+
+    const moduleOneLessonThree = () => {
+        return (
+            <>
+                <div className="lesson-content">
+                    <h5 className="mb-3">Lesson One: Basics of Communication and Marketing (IMC)</h5>
+                    <h6><b>Objective:</b> Understand what is the strategic approach of IMC and the necessity of Communication in the Marketing field.</h6>
+                    <h6><b>Format:</b> Video; Slides; Text</h6>
+                    <h6><b>Chapters:</b> Introduction to Communication and Marketing; The IMC - Integrated Marketing Communications </h6>
+                </div>
+            </>
+        )
+    }
+
+    const moduleOneLessonFour = () => {
+        return (
+            <>
+                <div className="lesson-content">
+                    <h5>Lesson One: Basics of Communication and Marketing (IMC)</h5>
+                    <h6><b>Objective:</b> Understand what is the strategic approach of IMC and the necessity of Communication in the Marketing field.</h6>
+                    <h6><b>Format:</b> Video; Slides; Text</h6>
+                    <h6><b>Chapters:</b> Introduction to Communication and Marketing; The IMC - Integrated Marketing Communications </h6>
+                </div>
+            </>
+        )
+    }
+
+    const moduleOneLessonFive = () => {
+        return (
+            <>
+                <div className="lesson-content">
+                    <h5>Lesson One: Basics of Communication and Marketing (IMC)</h5>
+                    <h6><b>Objective:</b> Understand what is the strategic approach of IMC and the necessity of Communication in the Marketing field.</h6>
+                    <h6><b>Format:</b> Video; Slides; Text</h6>
+                    <h6><b>Chapters:</b> Introduction to Communication and Marketing; The IMC - Integrated Marketing Communications </h6>
+                </div>
+            </>
+        )
+    }
+
+    const moduleOneDetails = () => {
+        return (
+            <>
+                <div className="details-module" >
+                    <div className="details-module-title">
+                        <h3>Module 1</h3>
+                        <h4>Essential Concepts of Integrated Marketing Communication (IMC)</h4>
+                    </div>
+                    <div className="details-module-content">
+                        <Tabs
+                            defaultActiveKey="lesson-1"
+                            transition={false}
+                            id="noanim-tab-example"
+                            className="mb-3"
+                        >
+                            <Tab eventKey="lesson-1" title="Lesson One">
+                                {moduleOneLessonOne()}
+                            </Tab>
+                            <Tab eventKey="lesson-2" title="Lesson Two">
+                                {moduleOneLessonTwo()}
+                            </Tab>
+                            <Tab eventKey="lesson-3" title="Lesson Three">
+                                {moduleOneLessonThree()}
+                            </Tab>
+                            <Tab eventKey="lesson-4" title="Lesson Four">
+                                {moduleOneLessonFour()}
+                            </Tab>
+                            <Tab eventKey="lesson-5" title="Lesson Five">
+                                {moduleOneLessonFive()}
+                            </Tab>
+                        </Tabs>
+                    </div>
+                </div>
+            </>
+        )
+    }
 
     return (
         <>
@@ -102,32 +201,37 @@ const Home = () => {
                     </div>
                 </div>
 
-                <Container className="mb-4">
-                    <Row>
-                        <Col xl={8}>
-                            <div className="video-container-home-page">
-                                <div className="video-background-home-page">
-                                    <iframe
-                                        src="https://www.youtube.com/embed/Ufs0Y6HkPD4"
-                                        frameBorder="0"
-                                        allowFullScreen
-                                    ></iframe>
+                <div className="home-video">
+                    <Container className="mb-4">
+                        <Row>
+                            <Col xl={8}>
+                                <div className="video-container-home-page">
+                                    <div className="video-background-home-page">
+                                        <iframe
+                                            src="https://www.youtube.com/embed/Ufs0Y6HkPD4"
+                                            frameBorder="0"
+                                            allowFullScreen
+                                        ></iframe>
+                                    </div>
                                 </div>
-                            </div>
-                        </Col>
-                        <Col xl={4}>
-                            <div className="mooc-details">
-                                {moduleOneBlock()}
-                                {moduleTwoBlock()}
-                                {moduleThreeBlock()}
-                            </div>
-                        </Col>
-                    </Row>
-                </Container>
+                            </Col>
+                            <Col xl={4}>
+                                <div className="mooc-details">
+                                    {moduleOneBlock()}
+                                    {moduleTwoBlock()}
+                                    {moduleThreeBlock()}
+                                </div>
+                            </Col>
+                        </Row>
+                    </Container>
+                </div>
+
 
                 <div className="module-details pt-4">
-                    <h1>Module Details</h1>
+                    <h2>Module Details</h2>
                     <div className="module-details-content">
+                        {moduleOneDetails()}
+                       
                     </div>
                 </div>
             </div>
