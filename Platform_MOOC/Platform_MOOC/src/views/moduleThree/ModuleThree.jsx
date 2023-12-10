@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useNavigate, useParams } from 'react-router-dom';
 
-import module_one_background from '../../assets/module_one_bg.png';
+import module_three_background from '../../assets/module_three_bg.png';
 import transcriptImage from '../../assets/transcriptImage.png';
 import youtubeImage from '../../assets/youtubeImage.png';
 import quizImage from '../../assets/quizImage.png';
@@ -57,6 +57,7 @@ const ModuleThree = () => {
                 url = "https://myisepipp-my.sharepoint.com/:b:/g/personal/1191457_isep_ipp_pt/EYBqZdRaVq9HpOSR7dqMgsoBPkl_5PMJ-Ivs431b-0iTzQ?e=qiNKcq";
                 break;
             default:
+                url = "https://myisepipp-my.sharepoint.com/:b:/r/personal/1191457_isep_ipp_pt/Documents/Mestrado%20-%20Semestre%201/CAMUL/C3_Lesson1/C3L1_script.pdf?csf=1&web=1&e=MNFINf";
                 break;
         }
         window.open(url, '_blank');
@@ -96,22 +97,22 @@ const ModuleThree = () => {
         var videoUrl;
         switch (currentLessonNumber) {
             case '1':
-                videoUrl = "https://www.youtube.com/watch?v=vDt4GVpCcKk";
+                videoUrl = "https://www.youtube.com/embed/vDt4GVpCcKk";
                 break;
             case '2':
-                videoUrl = "https://www.youtube.com/watch?v=HcqjXUvmy8c";
+                videoUrl = "https://www.youtube.com/embed/HcqjXUvmy8c";
                 break;
             case '3':
-                videoUrl = "https://www.youtube.com/watch?v=vkJb4o7_cFI";
+                videoUrl = "https://www.youtube.com/embed/vkJb4o7_cFI";
                 break;
             case '4':
-                videoUrl = "https://www.youtube.com/watch?v=yX1RYd0isQE";
+                videoUrl = "https://www.youtube.com/embed/yX1RYd0isQE";
                 break;
             case '5':
-                videoUrl = "https://www.youtube.com/watch?v=MyBC2HDKzr8";
+                videoUrl = "https://www.youtube.com/embed/MyBC2HDKzr8";
                 break;
             default:
-                videoUrl = "https://www.youtube.com/watch?v=vDt4GVpCcKk";
+                videoUrl = "https://www.youtube.com/embed/vDt4GVpCcKk";
                 break;
         }
         return (
@@ -195,7 +196,7 @@ const ModuleThree = () => {
     return (
         <>
             <div className="content-module-three">
-                <img className="background" src={module_one_background} alt="" />
+                <img className="background" src={module_three_background} alt="" />
                 <div className="video-container">
                     {lessonVideo()}
                 </div>

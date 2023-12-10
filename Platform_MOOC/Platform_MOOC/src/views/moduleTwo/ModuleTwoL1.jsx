@@ -98,7 +98,7 @@ const ModuleTwoL1 = () => {
     return (
         <>
             <div className="content-module-two">
-                <img className="background" src={module_two_background} alt="" />
+                <img className="background" src={module_two_background} alt="" style={{ opacity: 25 + '%' }} />
                 <div className="video-container">
                     <div className="video-background" />
                     <iframe
