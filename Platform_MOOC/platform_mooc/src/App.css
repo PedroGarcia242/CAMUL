@@ -435,6 +435,7 @@ li {
     align-items: center;
     background: #0E2417;
     flex-direction: column;
+    overflow: hidden;
 }
 
     .video-description-module-one h1 {
@@ -491,6 +492,7 @@ li {
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    overflow: hidden;
 }
 
 .chapter-description {
