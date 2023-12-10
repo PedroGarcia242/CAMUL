@@ -226,8 +226,8 @@ const Home = () => {
                 </div>
 
 
-                <div className="module-details pt-4">
-                    <h2>Module Details</h2>
+                <div className="module-details">
+                    <h2 className="mb-4">Module Details</h2>
                     <div className="module-details-content">
                         <Accordion defaultActiveKey="0">
                             <Accordion.Item eventKey="0">

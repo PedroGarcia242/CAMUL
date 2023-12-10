@@ -211,13 +211,16 @@ li {
     background-repeat: no-repeat;
     width: 100%;
     opacity: 10%;
-    z-index: -999;
+}
+
+.content-home-page .background {
+    z-index: -1;
 }
 
 .banner {
     width: 100%;
     position: absolute;
-    height: 300px; 
+    height: 300px;
     background: #dfe3e6;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 10;
@@ -682,13 +685,15 @@ h1.module-three-selected-chapter {
 
 .module-details {
     background: #E1DFCB;
-    margin-top: 70px;
+    margin-top: 30px;
+    padding-top: 30px;
     padding-bottom: 20px;
 }
 
-.module-details h2 {
-    color: #252525;
-}
+    .module-details h2 {
+        color: #252525;
+    }
+
 .module-details h3 {
     color: #252525;
 }
@@ -699,9 +704,8 @@ h1.module-three-selected-chapter {
 
 .info-header,
 .home-header {
-    margin-top: 65px;
     padding-top: 60px;
-    padding-bottom: 20px;
+    margin: 55px 10px 0 10px;
 }
     .home-header h2 {
         color: #252525
@@ -767,6 +771,11 @@ h1.module-three-selected-chapter {
     color: #f5f7fa;
 }
 
+.module-details-content .accordion-item:has(.module-one) {
+    border: 2px solid #0E2417;
+    border-radius: 10px;
+}
+
     .module-one .accordion-button::after, .module-one .accordion-button:not(.collapsed)::after {
         background-image: var(--bs-accordion-btn-icon);
         filter: invert(1);
@@ -777,6 +786,12 @@ h1.module-three-selected-chapter {
     color: #f5f7fa;
 }
 
+.module-details-content .accordion-item:has(.module-two) {
+    border: 2px solid #b16161;
+    border-radius: 10px;
+}
+
+
     .module-two .accordion-button::after, .module-two .accordion-button:not(.collapsed)::after {
         background-image: var(--bs-accordion-btn-icon);
         filter: invert(1);
@@ -785,6 +800,11 @@ h1.module-three-selected-chapter {
 .module-three .accordion-button, .module-three .accordion-button:not(.collapsed) {
     background: #32213a;
     color: #f5f7fa;
+}
+
+.module-details-content .accordion-item:has(.module-three) {
+    border: 2px solid #32213a;
+    border-radius: 10px;
 }
 
     .module-three .accordion-button::after, .module-three .accordion-button:not(.collapsed)::after {
