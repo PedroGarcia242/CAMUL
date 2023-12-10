@@ -101,7 +101,7 @@ li {
 .footer-module-one,
 .footer-module-two,
 .footer-module-three,
-.footer-info-page {
+.footer-home-page {
     position: static;
     width: 100%;
     bottom: 0;
@@ -130,7 +130,7 @@ li {
     background: #32213a;
 }
 
-.footer-info-page {
+.footer-home-page {
     background: #f0f3f6;
 }
 
@@ -175,7 +175,7 @@ li {
     background-image: linear-gradient(#32213a, #5B4F5A);
 }
 
-.content-info-page {
+.content-home-page {
     position: relative;
     background: #f5f7fa;
     /*background-image: linear-gradient(#B8B8FF, #f5f7fa);*/
@@ -190,6 +190,7 @@ li {
     background-repeat: no-repeat;
     width: 100%;
     opacity: 10%;
+    z-index: -999;
 }
 
 .banner {
@@ -355,6 +356,7 @@ li {
         height: 70%;
         border-radius: 10px;
     }
+
     .video-container .video-background-module-one {
         display: flex;
         position: absolute;
@@ -450,25 +452,8 @@ li {
         font-weight: bold;
     }
 
-.video-background-info-page {
-    display: flex;
-    position: absolute;
-    top: 12%;
-    width: 73%;
-    height: 74%;
-    background: #dfe3e6;
-    border-radius: 10px;
-    justify-content: space-between;
-    align-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    padding: 1%;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.video-description-info-page {
+.video-description-home-page {
     position: relative;
-    margin-top: -30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -477,12 +462,32 @@ li {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-    .video-description-info-page h1 {
+    .video-description-home-page h1 {
         position: relative;
         margin-top: 25px;
         font-size: 40px;
         color: #252525;
         font-weight: bold;
+    }
+
+.mooc-details {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    align-items: center;
+    padding: 5% 0;
+}
+
+.block {
+    margin: 3px 0;
+    padding: 10px;
+    background: #dfe3e6;
+    border-radius: 10px;
+}
+
+    .block:hover {
+        cursor: pointer;
+        transform: scale(1.05);
     }
 
 .card {
@@ -506,9 +511,9 @@ li {
 
 .card-content {
     display: flex;
-    border-bottom-left-radius: 3px;
+    border-bottom-left-radius: 5px;
     padding: 10px;
-    border-bottom-right-radius: 3px;
+    border-bottom-right-radius: 5px;
     position: absolute;
     top: 170px;
     background: #ffffee;
@@ -648,4 +653,44 @@ h1.module-three-selected-chapter {
 .quiz_google-form-container {
     width: 100%;
     max-width: 600px;
+}
+
+.module-details h1 {
+    font-size: 40px;
+    margin-bottom: 40px;
+    color: #252525;
+    font-weight: bold;
+}
+
+.home-header {
+    margin-top: 65px;
+    padding-top: 40px;
+}
+.home-header h5{
+    color: #252525cc
+}
+
+.video-container-home-page {
+    margin: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-background-home-page {
+    aspect-ratio: 1.777;
+    background: #dfe3e6;
+    width: 100%;
+    padding: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.video-container-home-page iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
 }
