@@ -77,8 +77,18 @@ const Info = () => {
                     </div>
                 </div>
 
+                <div className="container mt-4">
+                    <h2>Insert Review</h2>
+                    <div className="form-group">
+                        <label htmlFor="reviewTextarea">Your Review:</label>
+                        <textarea className="form-control form-control-lg" id="reviewTextarea" rows="6" placeholder="Write your review here..."></textarea>
+                    </div>
+                </div>
+
+
                 <div className="video-container">
                     <div className="video-background" />
+                    <h2>Tutorial in how to use the Website</h2>
                     <iframe
                         src="https://www.youtube.com/embed/Ufs0Y6HkPD4"
                         frameBorder="0"
