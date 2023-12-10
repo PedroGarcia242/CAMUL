@@ -7,10 +7,10 @@ import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import Accordion from 'react-bootstrap/Accordion';
 
-import homeBackground from '../assets/home.png';
+import homeBackground from '../assets/background_texture.png';
 
 const Home = () => {
-
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     const navigate = useNavigate();
 
     const handleModuleOneClick = () => {
@@ -155,7 +155,7 @@ const Home = () => {
                 <div className="details-module" >
                     <div className="details-module-title">
                         <h4>Essential Concepts of Integrated Marketing Communication (IMC)</h4>
-                    </div>
+                    </div >
                     <div className="details-module-content">
                         <Tabs
                             defaultActiveKey="lesson-1"
@@ -190,69 +190,71 @@ const Home = () => {
     return (
         <>
             <div className="content-home-page">
-                <img className="background" src={homeBackground} alt="" />
+                <img className="background-home" src={homeBackground} alt="" />
 
-                <div className="home-header">
-                    <h2>Learn With Us</h2>
-                    <div className="home-header-content">
-                        <h5>Looking for guidance on where to start your marketing journey? You came to the right place.</h5>
-                        <h5>Explore our content, learn for free.</h5>
+                <div style={{ zIndex: 10, position: 'relative' }}>
+                    <div className="home-header">
+                        <h2>Learn With Us</h2>
+                        <div className="home-header-content">
+                            <h5>Looking for guidance on where to start your marketing journey? You came to the right place.</h5>
+                            <h5>Explore our content, learn for free.</h5>
+                        </div>
                     </div>
-                </div>
 
-                <div className="home-video">
-                    <Container className="mb-4">
-                        <Row>
-                            <Col xl={8}>
-                                <div className="video-container-home-page">
-                                    <div className="video-background-home-page">
-                                        <iframe
-                                            src="https://www.youtube.com/embed/Ufs0Y6HkPD4"
-                                            frameBorder="0"
-                                            allowFullScreen
-                                        ></iframe>
+                    <div className="home-video">
+                        <Container className="mb-4">
+                            <Row>
+                                <Col xl={8}>
+                                    <div className="video-container-home-page">
+                                        <div className="video-background-home-page">
+                                            <iframe
+                                                src="https://www.youtube.com/embed/Ufs0Y6HkPD4"
+                                                frameBorder="0"
+                                                allowFullScreen
+                                            ></iframe>
+                                        </div>
                                     </div>
-                                </div>
-                            </Col>
-                            <Col xl={4}>
-                                <div className="mooc-details">
-                                    {moduleOneBlock()}
-                                    {moduleTwoBlock()}
-                                    {moduleThreeBlock()}
-                                </div>
-                            </Col>
-                        </Row>
-                    </Container>
-                </div>
+                                </Col>
+                                <Col xl={4}>
+                                    <div className="mooc-details">
+                                        {moduleOneBlock()}
+                                        {moduleTwoBlock()}
+                                        {moduleThreeBlock()}
+                                    </div>
+                                </Col>
+                            </Row>
+                        </Container>
+                    </div>
 
 
-                <div className="module-details">
-                    <h2 className="mb-4">Module Details</h2>
-                    <div className="module-details-content">
-                        <Accordion defaultActiveKey="0">
-                            <Accordion.Item eventKey="0">
-                                <Accordion.Header className="module-one">Module One</Accordion.Header>
-                                <Accordion.Body>
-                                    {moduleOneDetails()}
-                                </Accordion.Body>
-                            </Accordion.Item>
-                            <Accordion.Item eventKey="1">
-                                <Accordion.Header className="module-two">Module Two</Accordion.Header>
-                                <Accordion.Body>
-                                    {moduleOneDetails()}
-                                </Accordion.Body>
-                            </Accordion.Item>
-                            <Accordion.Item eventKey="2">
-                                <Accordion.Header className="module-three">Module Three</Accordion.Header>
-                                <Accordion.Body>
-                                    {moduleOneDetails()}
-                                </Accordion.Body>
-                            </Accordion.Item>
-                        </Accordion>
+                    <div className="module-details">
+                        <h2 className="mb-4">Module Details</h2>
+                        <div className="module-details-content">
+                            <Accordion defaultActiveKey="0">
+                                <Accordion.Item eventKey="0">
+                                    <Accordion.Header className="module-one">Module One</Accordion.Header>
+                                    <Accordion.Body>
+                                        {moduleOneDetails()}
+                                    </Accordion.Body>
+                                </Accordion.Item>
+                                <Accordion.Item eventKey="1">
+                                    <Accordion.Header className="module-two">Module Two</Accordion.Header>
+                                    <Accordion.Body>
+                                        {moduleOneDetails()}
+                                    </Accordion.Body>
+                                </Accordion.Item>
+                                <Accordion.Item eventKey="2">
+                                    <Accordion.Header className="module-three">Module Three</Accordion.Header>
+                                    <Accordion.Body>
+                                        {moduleOneDetails()}
+                                    </Accordion.Body>
+                                </Accordion.Item>
+                            </Accordion>
+                        </div>
                     </div>
                 </div>
+                {displayFooter()}
             </div>
-            {displayFooter()}
         </>
     );
 };
