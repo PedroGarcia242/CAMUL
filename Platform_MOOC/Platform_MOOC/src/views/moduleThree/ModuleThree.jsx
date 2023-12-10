@@ -41,20 +41,22 @@ const ModuleThree = () => {
     const handleTranscriptClick = () => {
         var url;
         switch (currentLessonNumber) {
+            case '1':
+                url = "https://myisepipp-my.sharepoint.com/:b:/r/personal/1191457_isep_ipp_pt/Documents/Mestrado%20-%20Semestre%201/CAMUL/C3_Lesson1/C3L1_script.pdf?csf=1&web=1&e=MNFINf";
+                break;
             case '2':
-                url = "https://myisepipp-my.sharepoint.com/:b:/g/personal/1190956_isep_ipp_pt/ERJa0kBnV2ZBlgvIcPcskEQBKPygFJOOrGkrDpbQrPlnbg?e=juyAYa";
+                url = "https://myisepipp-my.sharepoint.com/:b:/g/personal/1191457_isep_ipp_pt/EacIzxLtZllJpPpb2sw7pt8BSx9VFuS5XrxzsoExcpkzuA?e=u2hqnc";
                 break;
             case '3':
-                url = "https://myisepipp-my.sharepoint.com/:b:/g/personal/1190956_isep_ipp_pt/EXbtE6MjIQFNopGnxEnL0ykBzNa85nCLCvSbNfEZ08tpVA?e=6UGCYX";
+                url = "https://myisepipp-my.sharepoint.com/:b:/g/personal/1191457_isep_ipp_pt/EeR7xisMXmpGs_xTxvCfCfYBJZoyoJcQ-TrNuEnM8q_6vQ?e=McDglG";
                 break;
             case '4':
-                url = "https://myisepipp-my.sharepoint.com/:b:/g/personal/1190956_isep_ipp_pt/EazEGhr0JO1LhGLccEeQn5oBbnp2lxQERKjIqwsEK8Ijug?e=BSYgfT";
+                url = "https://myisepipp-my.sharepoint.com/:b:/g/personal/1191457_isep_ipp_pt/EctjDN2X0P9Ck5aX7W-xGIYBpTs4wyf8yjpffMZMikQH-A?e=PThgZF";
                 break;
             case '5':
-                url = "https://myisepipp-my.sharepoint.com/:b:/g/personal/1190956_isep_ipp_pt/EXiyz59z1BVOlIpQnB0Ek24BbaDniWgsqL_IIRG0Dj0IEA?e=rjEPi5";
+                url = "https://myisepipp-my.sharepoint.com/:b:/g/personal/1191457_isep_ipp_pt/EYBqZdRaVq9HpOSR7dqMgsoBPkl_5PMJ-Ivs431b-0iTzQ?e=qiNKcq";
                 break;
             default:
-                url = "https://myisepipp-my.sharepoint.com/:b:/g/personal/1190956_isep_ipp_pt/Ef3iEo1EdklHugWWjvzotMsB2q5YDCWaZLph02xvpZU9YQ";
                 break;
         }
         window.open(url, '_blank');
@@ -63,47 +65,53 @@ const ModuleThree = () => {
     const handleYoutubeClick = () => {
         var url;
         switch (currentLessonNumber) {
+            case '1':
+                url = "https://www.youtube.com/watch?v=vDt4GVpCcKk";
+                break;
             case '2':
-                url = "https://www.youtube.com/watch?v=Z5JAXSm1wvQ";
+                url = "https://www.youtube.com/watch?v=HcqjXUvmy8c";
                 break;
             case '3':
-                url = "https://www.youtube.com/watch?v=C1IBY--JqTk";
+                url = "https://www.youtube.com/watch?v=vkJb4o7_cFI";
                 break;
             case '4':
-                url = "https://www.youtube.com/watch?v=2dkGEd0PrfE";
+                url = "https://www.youtube.com/watch?v=yX1RYd0isQE";
                 break;
             case '5':
-                url = "https://www.youtube.com/watch?v=hQ2YuNalU7Q";
+                url = "https://www.youtube.com/watch?v=MyBC2HDKzr8";
                 break;
             default:
-                url = "https://www.youtube.com/watch?v=5V5QDihsihY";
+                url = "https://www.youtube.com/watch?v=vDt4GVpCcKk";
                 break;
         }
         window.open(url, '_blank');
     };
 
     const handleQuizClick = () => {
-        const url = "https://docs.google.com/forms/d/e/1FAIpQLSdqUsUVb7jxBc2lQHWOOcr4iRhPGNOl42dE1M36NvaIfGLD7w/viewform";
+        const url = "https://docs.google.com/forms/d/e/1FAIpQLSdogYZ7HQ0iP4VF5NO4uWxm75lWT16TrZJWcUn0xleNH0zuRw/viewform?pli=1";
         window.open(url, '_blank');
     };
 
     const lessonVideo = () => {
         var videoUrl;
         switch (currentLessonNumber) {
-            case '2':
+            case '1':
                 videoUrl = "https://www.youtube.com/watch?v=vDt4GVpCcKk";
                 break;
-            case '3':
+            case '2':
                 videoUrl = "https://www.youtube.com/watch?v=HcqjXUvmy8c";
                 break;
-            case '4':
+            case '3':
                 videoUrl = "https://www.youtube.com/watch?v=vkJb4o7_cFI";
                 break;
-            case '5':
+            case '4':
                 videoUrl = "https://www.youtube.com/watch?v=yX1RYd0isQE";
                 break;
-            default:
+            case '5':
                 videoUrl = "https://www.youtube.com/watch?v=MyBC2HDKzr8";
+                break;
+            default:
+                videoUrl = "https://www.youtube.com/watch?v=vDt4GVpCcKk";
                 break;
         }
         return (
@@ -137,10 +145,10 @@ const ModuleThree = () => {
                     <img className="card-img" src={transcriptImage} alt="transcript" />
                     <div className="card-content">
                         <h1 className="card-title">
-                            Transcripts
+                            Transcript
                         </h1>
                         <h4 className="card-text">
-                            Here you can find the transcripts for this lesson.
+                            Here you can find the transcript for this lesson.
                         </h4>
                     </div>
                 </div>
