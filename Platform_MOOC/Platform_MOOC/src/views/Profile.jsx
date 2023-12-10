@@ -1,4 +1,6 @@
 import ProgressBar from 'react-bootstrap/ProgressBar';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useNavigate } from 'react-router-dom';
 
@@ -9,14 +11,17 @@ const Profile = () => {
 
     const handleModuleOneClick = () => {
         navigate('/ModuleOne/1');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
     const handleModuleTwoL1Click = () => {
         navigate('/ModuleTwoL1');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
     const handleModuleThreeClick = () => {
         navigate('/ModuleThree/1');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
     //footer
@@ -48,22 +53,22 @@ const Profile = () => {
                     <div className="mooc">
                         <ProgressBar striped variant="success" now={70} />
 
-                        <div className="modules">
-                            <div className="module_one">
+                        <Row className="modules">
+                            <Col className="module_one" md={12} xl={4}>
                                 <div className="module_one_banner" onClick={handleModuleOneClick}/>
                                 <div className="module_one_details"/>
-                            </div>
+                            </Col>
 
-                            <div className="module_two">
+                            <Col className="module_two" md={12} xl={4}>
                                 <div className="module_two_banner" onClick={handleModuleTwoL1Click} />
                                 <div className="module_two_details" />
-                            </div>
+                            </Col>
 
-                            <div className="module_three">
+                            <Col className="module_three" md={12} xl={4}>
                                 <div className="module_three_banner" onClick={handleModuleThreeClick} />
                                 <div className="module_three_details" />
-                            </div>
-                        </div>
+                            </Col>
+                        </Row>
                     </div>
                 </div>
             </div>
