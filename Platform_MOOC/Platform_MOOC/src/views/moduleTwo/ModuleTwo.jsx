@@ -205,33 +205,35 @@ const ModuleTwo = () => {
     return (
         <>
             <div className="content-module-two">
-                <img className="background" src={module_two_background} alt="" />
-                <div className="video-container">
-                    {lessonVideo()}
-                </div>
-                <div className="video-description-module-two">
-                    <h1>EXTRAS</h1>
-                    <div className="video-description-content">
-                        {transcriptCard()}
-                        {youtubeCard()}
-                        {quizCard()}
+                <img className="background back-two" src={module_two_background} alt="" />
+                <div style={{ zIndex: 10, position: 'relative' }}>
+                    <div className="video-container">
+                        {lessonVideo()}
                     </div>
-                </div>
+                    <div className="video-description-module-two">
+                        <h1>EXTRAS</h1>
+                        <div className="video-description-content">
+                            {transcriptCard()}
+                            {youtubeCard()}
+                            {quizCard()}
+                        </div>
+                    </div>
 
-                <div className="chapter-description">
-                    <div className="chapter-description-header" >
-                        <h1>CHAPTER 1: Ethics and Regulation</h1>
+                    <div className="chapter-description">
+                        <div className="chapter-description-header-module-two" >
+                            <h1>CHAPTER 2: Ethics and Regulation</h1>
+                        </div>
+                        <div className="chapter-description-content" >
+                            <h1 className={currentLessonNumber === '1' ? "module-two-selected-chapter" : ""} onClick={() => handleNavigateClick(1)} >Lesson 1: Ethical Dilemmas in Marketing</h1>
+                            <h1 className={currentLessonNumber === '2' ? "module-two-selected-chapter" : ""} onClick={() => handleNavigateClick(2)} >Lesson 2: Regulation in Marketing </h1>
+                            <h1 className={currentLessonNumber === '3' ? "module-two-selected-chapter" : ""} onClick={() => handleNavigateClick(3)} >Lesson 3: Social Responsibility and Sustainability</h1>
+                            <h1 className={currentLessonNumber === '4' ? "module-two-selected-chapter" : ""} onClick={() => handleNavigateClick(4)} >Lesson 4: Crisis Communication</h1>
+                            <h1 className={currentLessonNumber === '5' ? "module-two-selected-chapter" : ""} onClick={() => handleNavigateClick(5)} >Lesson 5: Responsible Advertising and Social Impact</h1>
+                        </div>
                     </div>
-                    <div className="chapter-description-content" >
-                        <h1 className={currentLessonNumber === '1' ? "module-two-selected-chapter" : ""} onClick={() => handleNavigateClick(1)} >Lesson 1: Ethical Dilemmas in Marketing</h1>
-                        <h1 className={currentLessonNumber === '2' ? "module-two-selected-chapter" : ""} onClick={() => handleNavigateClick(2)} >Lesson 2: Regulation in Marketing </h1>
-                        <h1 className={currentLessonNumber === '3' ? "module-two-selected-chapter" : ""} onClick={() => handleNavigateClick(3)} >Lesson 3: Social Responsibility and Sustainability</h1>
-                        <h1 className={currentLessonNumber === '4' ? "module-two-selected-chapter" : ""} onClick={() => handleNavigateClick(4)} >Lesson 4: Crisis Communication</h1>
-                        <h1 className={currentLessonNumber === '5' ? "module-two-selected-chapter" : ""} onClick={() => handleNavigateClick(5)} >Lesson 5: Responsible Advertising and Social Impact</h1>
-                    </div>
+                    {displayFooter()}
                 </div>
             </div>
-            {displayFooter()}
         </>
     );
 };

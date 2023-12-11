@@ -187,33 +187,35 @@ const ModuleOne = () => {
     return (
         <>
             <div className="content-module-one">
-                <img className="background" src={module_one_background} alt="" />
-                <div className="video-container">
-                    {lessonVideo()}
-                </div>
-                <div className="video-description-module-one">
-                    <h1>EXTRAS</h1>
-                    <div className="video-description-content">
-                        {transcriptCard()}
-                        {youtubeCard()}
-                        {quizCard()}
+                <img className="background back-one" src={module_one_background} alt="" />
+                <div style={{ zIndex: 10, position: 'relative' }}>
+                    <div className="video-container">
+                        {lessonVideo()}
                     </div>
-                </div>
+                    <div className="video-description-module-one">
+                        <h1>EXTRAS</h1>
+                        <div className="video-description-content">
+                            {transcriptCard()}
+                            {youtubeCard()}
+                            {quizCard()}
+                        </div>
+                    </div>
 
-                <div className="chapter-description">
-                    <div className="chapter-description-header" >
-                        <h1>CHAPTER 1: Introduction to Communication and Marketing</h1>
+                    <div className="chapter-description">
+                        <div className="chapter-description-header-module-one" >
+                            <h1>CHAPTER 1: Introduction to Communication and Marketing</h1>
+                        </div>
+                        <div className="chapter-description-content" >
+                            <h1 className={currentLessonNumber === '1' ? "module-one-selected-chapter" : ""} onClick={() => handleNavigateClick(1)} >Lesson 1: Introduction to Communication and Marketing</h1>
+                            <h1 className={currentLessonNumber === '2' ? "module-one-selected-chapter" : ""} onClick={() => handleNavigateClick(2)} >Lesson 2: Consumer Psychology </h1>
+                            <h1 className={currentLessonNumber === '3' ? "module-one-selected-chapter" : ""} onClick={() => handleNavigateClick(3)} >Lesson 3: Market Research Methods and Tendencies</h1>
+                            <h1 className={currentLessonNumber === '4' ? "module-one-selected-chapter" : ""} onClick={() => handleNavigateClick(4)} >Lesson 4: Media Planning</h1>
+                            <h1 className={currentLessonNumber === '5' ? "module-one-selected-chapter" : ""} onClick={() => handleNavigateClick(5)} >Lesson 5: Brand Loyalty and Customer Retention</h1>
+                        </div>
                     </div>
-                    <div className="chapter-description-content" >
-                        <h1 className={currentLessonNumber === '1' ? "module-one-selected-chapter" : ""} onClick={() => handleNavigateClick(1)} >Lesson 1: Introduction to Communication and Marketing</h1>
-                        <h1 className={currentLessonNumber === '2' ? "module-one-selected-chapter" : ""} onClick={() => handleNavigateClick(2)} >Lesson 2: Consumer Psychology </h1>
-                        <h1 className={currentLessonNumber === '3' ? "module-one-selected-chapter" : ""} onClick={() => handleNavigateClick(3)} >Lesson 3: Market Research Methods and Tendencies</h1>
-                        <h1 className={currentLessonNumber === '4' ? "module-one-selected-chapter" : ""} onClick={() => handleNavigateClick(4)} >Lesson 4: Media Planning</h1>
-                        <h1 className={currentLessonNumber === '5' ? "module-one-selected-chapter" : ""} onClick={() => handleNavigateClick(5)} >Lesson 5: Brand Loyalty and Customer Retention</h1>
-                    </div>
+                    {displayFooter()}
                 </div>
             </div>
-            {displayFooter()}
         </>
     );
 };

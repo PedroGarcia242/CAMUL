@@ -196,33 +196,35 @@ const ModuleThree = () => {
     return (
         <>
             <div className="content-module-three">
-                <img className="background" src={module_three_background} alt="" />
-                <div className="video-container">
-                    {lessonVideo()}
-                </div>
-                <div className="video-description-module-three">
-                    <h1>EXTRAS</h1>
-                    <div className="video-description-content">
-                        {transcriptCard()}
-                        {youtubeCard()}
-                        {quizCard()}
+                <img className="background back-three" src={module_three_background} alt="" />
+                <div style={{ zIndex: 10, position: 'relative' }}>
+                    <div className="video-container">
+                        {lessonVideo()}
                     </div>
-                </div>
+                    <div className="video-description-module-three">
+                        <h1>EXTRAS</h1>
+                        <div className="video-description-content">
+                            {transcriptCard()}
+                            {youtubeCard()}
+                            {quizCard()}
+                        </div>
+                    </div>
 
-                <div className="chapter-description">
-                    <div className="chapter-description-header" >
-                        <h1>CHAPTER 3: Creating and Managing a Marketing Plan</h1>
+                    <div className="chapter-description">
+                        <div className="chapter-description-header-module-three" >
+                            <h1>CHAPTER 3: Creating and Managing a Marketing Plan</h1>
+                        </div>
+                        <div className="chapter-description-content" >
+                            <h1 className={currentLessonNumber === '1' ? "module-three-selected-chapter" : ""} onClick={() => handleNavigateClick(1)} >Lesson 1: Understanding the Essentials of Marketing Planning</h1>
+                            <h1 className={currentLessonNumber === '2' ? "module-three-selected-chapter" : ""} onClick={() => handleNavigateClick(2)} >Lesson 2: Setting Marketing Objectives and Strategy with AIDA</h1>
+                            <h1 className={currentLessonNumber === '3' ? "module-three-selected-chapter" : ""} onClick={() => handleNavigateClick(3)} >Lesson 3: Developing Creative and Persuasive Marketing Materials</h1>
+                            <h1 className={currentLessonNumber === '4' ? "module-three-selected-chapter" : ""} onClick={() => handleNavigateClick(4)} >Lesson 4: Implementation of Marketing Plans</h1>
+                            <h1 className={currentLessonNumber === '5' ? "module-three-selected-chapter" : ""} onClick={() => handleNavigateClick(5)} >Lesson 5: Monitorization and Evaluation of Marketing Plans</h1>
+                        </div>
                     </div>
-                    <div className="chapter-description-content" >
-                        <h1 className={currentLessonNumber === '1' ? "module-three-selected-chapter" : ""} onClick={() => handleNavigateClick(1)} >Lesson 1: Understanding the Essentials of Marketing Planning</h1>
-                        <h1 className={currentLessonNumber === '2' ? "module-three-selected-chapter" : ""} onClick={() => handleNavigateClick(2)} >Lesson 2: Setting Marketing Objectives and Strategy with AIDA</h1>
-                        <h1 className={currentLessonNumber === '3' ? "module-three-selected-chapter" : ""} onClick={() => handleNavigateClick(3)} >Lesson 3: Developing Creative and Persuasive Marketing Materials</h1>
-                        <h1 className={currentLessonNumber === '4' ? "module-three-selected-chapter" : ""} onClick={() => handleNavigateClick(4)} >Lesson 4: Implementation of Marketing Plans</h1>
-                        <h1 className={currentLessonNumber === '5' ? "module-three-selected-chapter" : ""} onClick={() => handleNavigateClick(5)} >Lesson 5: Monitorization and Evaluation of Marketing Plans</h1>
-                    </div>
+                    {displayFooter()}
                 </div>
             </div>
-            {displayFooter()}
         </>
     );
 };

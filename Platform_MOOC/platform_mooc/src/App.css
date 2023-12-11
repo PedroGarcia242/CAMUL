@@ -160,15 +160,18 @@ li {
 }
 .content-module-one {
     position: relative;
-    background-image: linear-gradient(#0E2417, #374530);
+    background: #f5f7fa;
+    /*background-image: linear-gradient(#0E2417, #374530);*/
 }
 .content-module-two {
     position: relative;
-    background-image: linear-gradient(#b16161, #d1caa1);
+    background: #f5f7fa;
+    /*background-image: linear-gradient(#b16161, #d1caa1);*/
 }
 .content-module-three {
     position: relative;
-    background-image: linear-gradient(#32213a, #5B4F5A);
+    background: #f5f7fa;
+    /*background-image: linear-gradient(#32213a, #5B4F5A);*/
 }
 
 .content-info-page,
@@ -188,17 +191,14 @@ li {
     opacity: 10%;
 }
 
-.background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    opacity: 10%;
+.back-one {
 }
 
+.back-two {
+}
+
+.back-three {
+}
 
 .background-home {
     position: absolute;
@@ -619,10 +619,24 @@ li {
     flex-direction: column;
 }
 
-.chapter-description-header h1 {
+.chapter-description-header-module-one h1 {
     font-size: 40px;
     margin-bottom: 40px;
-    color: #fafaeaee;
+    color: #0E2417;
+    font-weight: bold;
+}
+
+.chapter-description-header-module-two h1 {
+    font-size: 40px;
+    margin-bottom: 40px;
+    color: #b16161;
+    font-weight: bold;
+}
+
+.chapter-description-header-module-three h1 {
+    font-size: 40px;
+    margin-bottom: 40px;
+    color: #32213a;
     font-weight: bold;
 }
 
