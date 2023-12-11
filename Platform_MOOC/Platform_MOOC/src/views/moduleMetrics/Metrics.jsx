@@ -181,6 +181,13 @@ const Metrics = () => {
                 <img className="background-home" src={homeBackground} alt="" />
 
                 <div style={{ zIndex: 10, position: 'relative' }}>
+                    <div className="home-header">
+                        <h2>User Metrics</h2>
+                        <div className="home-header-content">
+                            <h5>Here you can check on your results and compare them to the average results obtained in our platform.</h5>
+                            <h5>Explore the charts, read carefully, revisit your weaker lessons.</h5>
+                        </div>
+                    </div>
                     <Row className="global-metrics">
                         <Col className="metrics-col">
                             <h3>Module Progression</h3>

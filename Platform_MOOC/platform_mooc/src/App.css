@@ -914,7 +914,7 @@ h1.module-three-selected-chapter {
 
 .overall-metrics {
     height: 450px;
-    padding: 30px 0;
+    padding: 30px;
     margin-bottom: 30px;
     background: #f5f7fa;
     border-radius: 20px;
@@ -924,33 +924,38 @@ h1.module-three-selected-chapter {
 .content-metrics-page {
     position: relative;
     background: #f5f7fa;
-    padding-top: 120px;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.content-metrics-page h3{
+    margin-bottom: 30px;
 }
 
 .global-metrics, .module-metrics {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 100px;
 }
 
 .global-metrics {
     padding-right: 15%;
     padding-left: 15%;
+    margin-bottom: 50px;
+    margin-top: 60px;
 }
 
-    .module-metrics {
-        width: 100vw;
-        background: #E1DFCB;
-        padding-bottom: 20px;
-        padding-right: 5%;
-        padding-left: 5%;
-        padding-top: 50px;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-    }
+.module-metrics {
+    width: 100vw;
+    background: #E1DFCB;
+    padding-bottom: 20px;
+    padding-right: 5%;
+    padding-left: 5%;
+    padding-top: 35px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    margin-bottom: 100px;
+}
 
 .metrics-col {
     display: flex;
