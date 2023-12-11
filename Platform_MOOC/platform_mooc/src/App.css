@@ -889,6 +889,11 @@ h1.module-three-selected-chapter {
     padding: 0 15%;
 }
 
+.bar-chart {
+    width: 500px;
+    height:500px;
+}
+
 /* OVERWRITE BOOTSTRAP CLASSES */
 
 .module-details .nav-link {

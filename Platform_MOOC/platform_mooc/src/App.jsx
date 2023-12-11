@@ -1,8 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownButton from 'react-bootstrap/DropdownButton';
-
 import './App.css'
 
 import Home from './views/Home';
@@ -12,6 +9,8 @@ import Profile from './views/Profile';
 import ModuleOne from './views/moduleOne/ModuleOne';
 import ModuleTwo from './views/moduleTwo/ModuleTwo';
 import ModuleThree from './views/moduleThree/ModuleThree';
+
+import Metrics from './views/moduleMetrics/Metrics';
 /*
 import ModuleTwoL1 from './views/moduleTwo/ModuleTwoL1';
 import ModuleTwoL2 from './views/moduleTwo/ModuleTwoL2';
@@ -33,7 +32,11 @@ function App() {
 
     const ModuleOnePage = () => <ModuleOne />;
     const ModuleTwoPage = () => <ModuleTwo />;
+    const ModuleThreePage = () => <ModuleThree />;
 
+    const MetricsPage = () => <Metrics />;
+
+    /*
     const ModuleTwoL1Page = () => <ModuleTwoL1 />;
     const ModuleTwoL2Page = () => <ModuleTwoL2 />;
     const ModuleTwoL3Page = () => <ModuleTwoL3 />;
@@ -45,8 +48,7 @@ function App() {
     const ModuleTwoQuizL3Page = () => <ModuleTwoQuizL3 />;
     const ModuleTwoQuizL4Page = () => <ModuleTwoQuizL4 />;
     const ModuleTwoQuizL5Page = () => <ModuleTwoQuizL5 />;
-
-    const ModuleThreePage = () => <ModuleThree />;
+    */
 
     //FUNCTIONS
     //navbar
@@ -83,6 +85,8 @@ function App() {
                     <Route path="/ModuleOne/:currentLessonNumber" element={<ModuleOnePage />} />
                     <Route path="/ModuleTwo/:currentLessonNumber" element={<ModuleTwoPage />} />
                     <Route path="/ModuleThree/:currentLessonNumber" element={<ModuleThreePage />} />
+
+                    <Route path="/Metrics" element={<MetricsPage />} />
                     {/*
                     <Route path="/ModuleTwoL1" element={<ModuleTwoL1Page />} />
                     <Route path="/ModuleTwoL2" element={<ModuleTwoL2Page />} />

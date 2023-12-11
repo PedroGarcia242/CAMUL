@@ -29,10 +29,15 @@ const Profile = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
+    const handleMetricsClick = () => {
+        navigate('/Metrics');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
     const moduleOneDetails = () => {
         return (
             <>
-                <div className="module_one_details" >
+                <div className="module_one_details" onClick={handleMetricsClick}>
 
                 </div>
             </>
