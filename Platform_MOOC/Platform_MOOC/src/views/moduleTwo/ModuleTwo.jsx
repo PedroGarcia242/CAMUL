@@ -39,23 +39,22 @@ const ModuleTwo = () => {
     };
 
     const handleTranscriptClick = () => {
-        return; //please mete aqui os transcripts :)
         var url;
         switch (currentLessonNumber) {
             case '2':
-                url = "https://myisepipp-my.sharepoint.com/:b:/g/personal/1190956_isep_ipp_pt/ERJa0kBnV2ZBlgvIcPcskEQBKPygFJOOrGkrDpbQrPlnbg?e=juyAYa";
+                url = "https://myisepipp-my.sharepoint.com/:b:/r/personal/1161537_isep_ipp_pt/Documents/Mestrado/MOOC/LESSON2_TRANSCRIPT.pdf?csf=1&web=1&e=JtmE7n";
                 break;
             case '3':
-                url = "https://myisepipp-my.sharepoint.com/:b:/g/personal/1190956_isep_ipp_pt/EXbtE6MjIQFNopGnxEnL0ykBzNa85nCLCvSbNfEZ08tpVA?e=6UGCYX";
+                url = "https://myisepipp-my.sharepoint.com/:b:/r/personal/1161537_isep_ipp_pt/Documents/Mestrado/MOOC/LESSON3_TRANSCRIPT.pdf?csf=1&web=1&e=r1JfXq";
                 break;
             case '4':
-                url = "https://myisepipp-my.sharepoint.com/:b:/g/personal/1190956_isep_ipp_pt/EazEGhr0JO1LhGLccEeQn5oBbnp2lxQERKjIqwsEK8Ijug?e=BSYgfT";
+                url = "https://myisepipp-my.sharepoint.com/:b:/r/personal/1161537_isep_ipp_pt/Documents/Mestrado/MOOC/LESSON4_TRANSCRIPT.pdf?csf=1&web=1&e=75bHWa";
                 break;
             case '5':
-                url = "https://myisepipp-my.sharepoint.com/:b:/g/personal/1190956_isep_ipp_pt/EXiyz59z1BVOlIpQnB0Ek24BbaDniWgsqL_IIRG0Dj0IEA?e=rjEPi5";
+                url = "https://myisepipp-my.sharepoint.com/:b:/r/personal/1161537_isep_ipp_pt/Documents/Mestrado/MOOC/LESSON5_TRANSCRIPT.pdf?csf=1&web=1&e=42gg8I";
                 break;
             default:
-                url = "https://myisepipp-my.sharepoint.com/:b:/g/personal/1190956_isep_ipp_pt/Ef3iEo1EdklHugWWjvzotMsB2q5YDCWaZLph02xvpZU9YQ";
+                url = "https://myisepipp-my.sharepoint.com/:b:/r/personal/1161537_isep_ipp_pt/Documents/Mestrado/MOOC/LESSON1_TRANSCRIPT.pdf?csf=1&web=1&e=JNVnyP";
                 break;
         }
         window.open(url, '_blank');
@@ -194,7 +193,7 @@ const ModuleTwo = () => {
                             Quiz
                         </h1>
                         <h4 className="card-text">
-                            Here you can take the general quiz about the whole module.
+                            Here you can take the quiz about this lesson.
                         </h4>
                     </div>
                 </div>
@@ -220,7 +219,7 @@ const ModuleTwo = () => {
 
                 <div className="chapter-description">
                     <div className="chapter-description-header" >
-                        <h1>CHAPTER 1: Ethics and Regulation</h1>
+                        <h1>CHAPTER 2: Ethics and Regulation</h1>
                     </div>
                     <div className="chapter-description-content" >
                         <h1 className={currentLessonNumber === '1' ? "module-two-selected-chapter" : ""} onClick={() => handleNavigateClick(1)} >Lesson 1: Ethical Dilemmas in Marketing</h1>
