@@ -1,5 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
 
 import './App.css'
 
@@ -7,8 +9,10 @@ import Home from './views/Home';
 import Info from './views/Info';
 import Profile from './views/Profile';
 
-import ModuleOne from './views/moduleOne/ModuleOne';    
-
+import ModuleOne from './views/moduleOne/ModuleOne';
+import ModuleTwo from './views/moduleTwo/ModuleTwo';
+import ModuleThree from './views/moduleThree/ModuleThree';
+/*
 import ModuleTwoL1 from './views/moduleTwo/ModuleTwoL1';
 import ModuleTwoL2 from './views/moduleTwo/ModuleTwoL2';
 import ModuleTwoL3 from './views/moduleTwo/ModuleTwoL3';
@@ -19,8 +23,7 @@ import ModuleTwoQuizL2 from './views/moduleTwo/ModuleTwoQuizL2';
 import ModuleTwoQuizL3 from './views/moduleTwo/ModuleTwoQuizL3';
 import ModuleTwoQuizL4 from './views/moduleTwo/ModuleTwoQuizL4';
 import ModuleTwoQuizL5 from './views/moduleTwo/ModuleTwoQuizL5';
-
-import ModuleThree from './views/moduleThree/ModuleThree';
+*/
 
 function App() {
 
@@ -29,6 +32,7 @@ function App() {
     const ProfilePage = () => <Profile />;
 
     const ModuleOnePage = () => <ModuleOne />;
+    const ModuleTwoPage = () => <ModuleTwo />;
 
     const ModuleTwoL1Page = () => <ModuleTwoL1 />;
     const ModuleTwoL2Page = () => <ModuleTwoL2 />;
@@ -50,10 +54,15 @@ function App() {
         return (
             <>
                 <nav className="navbar">
-                    <li className="text-button"><Link to="/">HOME</Link></li>
                     <ul className="navbar-items">
+                        <li className="text-button"><Link to="/">HOME</Link></li>
                         <li className="text-button"><Link to="/profile">PROFILE</Link></li>
                         <li className="text-button"><Link to="/info">INFO</Link></li>
+                    </ul>
+                    <ul className="navbar-items">
+                        <li className="text-button"><Link to="/ModuleOne/1">MODULE 1</Link></li>
+                        <li className="text-button"><Link to="/ModuleTwo/1">MODULE 2</Link></li>
+                        <li className="text-button"><Link to="/ModuleThree/1">MODULE 3</Link></li>
                     </ul>
                 </nav>
             </>
@@ -72,8 +81,9 @@ function App() {
                     <Route path="/Profile" element={<ProfilePage />} />
 
                     <Route path="/ModuleOne/:currentLessonNumber" element={<ModuleOnePage />} />
-
-
+                    <Route path="/ModuleTwo/:currentLessonNumber" element={<ModuleTwoPage />} />
+                    <Route path="/ModuleThree/:currentLessonNumber" element={<ModuleThreePage />} />
+                    {/*
                     <Route path="/ModuleTwoL1" element={<ModuleTwoL1Page />} />
                     <Route path="/ModuleTwoL2" element={<ModuleTwoL2Page />} />
                     <Route path="/ModuleTwoL3" element={<ModuleTwoL3Page />} />
@@ -84,8 +94,7 @@ function App() {
                     <Route path="/ModuleTwoQuizL3" element={<ModuleTwoQuizL3Page />} />
                     <Route path="/ModuleTwoQuizL4" element={<ModuleTwoQuizL4Page />} />
                     <Route path="/ModuleTwoQuizL5" element={<ModuleTwoQuizL5Page />} />
-
-                    <Route path="/ModuleThree/:currentLessonNumber" element={<ModuleThreePage />} />
+                    */}
                 </Routes>
             </Router>
         </>

@@ -60,11 +60,11 @@ const Info = () => {
                         </div>
                     </div>
 
-                    <div className="container mt-4">
+                    <div className="review mt-4">
                         <h2>Send a Review</h2>
-                        <div className="form-group mb-5">
+                        <div className="review-form mb-5">
                             <h5 className="mb-3">Help us improve</h5>
-                            <textarea className="form-control form-control-lg" id="reviewTextarea" rows="6" placeholder="Write your review here..."></textarea>
+                            <textarea className="form-control form-control-lg" rows="6" placeholder="Write your review here..."></textarea>
                         </div>
                     </div>
 

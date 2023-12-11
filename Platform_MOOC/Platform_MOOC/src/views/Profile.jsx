@@ -20,7 +20,7 @@ const Profile = () => {
     };
 
     const handleModuleTwoL1Click = () => {
-        navigate('/ModuleTwoL1');
+        navigate('/ModuleTwo/1');
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
@@ -28,6 +28,30 @@ const Profile = () => {
         navigate('/ModuleThree/1');
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
+
+    const moduleOneDetails = () => {
+        return (
+            <>
+                <div className="module_one_details" />
+            </>
+        )
+    }
+
+    const moduleTwoDetails = () => {
+        return (
+            <>
+                <div className="module_two_details" />
+            </>
+        )
+    }
+
+    const moduleThreeDetails = () => {
+        return (
+            <>
+                <div className="module_three_details" />
+            </>
+        )
+    }
 
     //footer
     const displayFooter = () => {
@@ -56,7 +80,9 @@ const Profile = () => {
                             <div className="about">
                                 <h2>About Me</h2>
 
-                                <div className="square" />
+                                <div className="square">
+                                    <h6>Here the user can write about himself, his hobbies, his goals, etc. He can also use this to take notes about the course.</h6>
+                                </div>
                             </div>
                         </div>
                         <div className="mooc">
@@ -67,21 +93,21 @@ const Profile = () => {
                                     <div className="module_one_banner" onClick={handleModuleOneClick} >
                                         <img className="chapter_immage" src={module1} alt="" />
                                     </div>
-                                    <div className="module_one_details"/>
+                                    {moduleOneDetails()}
                                 </Col>
 
                                 <Col className="module_two" md={12} xl={4}>
                                     <div className="module_two_banner" onClick={handleModuleTwoL1Click} >
                                         <img className="chapter_immage" src={module2} alt="" />
                                     </div>
-                                    <div className="module_two_details" />
+                                    {moduleTwoDetails()}
                                 </Col>
 
                                 <Col className="module_three" md={12} xl={4}>
                                     <div className="module_three_banner" onClick={handleModuleThreeClick} >
                                         <img className="chapter_immage" src={module3} alt="" />
                                     </div>
-                                    <div className="module_three_details" />
+                                    {moduleThreeDetails()}
                                 </Col>
                             </Row>
                         </div>

@@ -19,7 +19,7 @@ const Home = () => {
     };
 
     const handleModuleTwoL1Click = () => {
-        navigate('/ModuleTwoL1');
+        navigate('/ModuleTwo/1');
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
