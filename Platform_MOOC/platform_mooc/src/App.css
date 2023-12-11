@@ -861,8 +861,6 @@ h1.module-three-selected-chapter {
         filter: invert(1);
     }
 
-
-
 .faq {
     background: #E1DFCB;
     margin-top: 30px;
@@ -892,6 +890,21 @@ h1.module-three-selected-chapter {
 .bar-chart {
     width: 500px;
     height:500px;
+}
+
+.content-metrics-page {
+    position: relative;
+    background: #f5f7fa;
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.global-metrics, .module-metrics {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 /* OVERWRITE BOOTSTRAP CLASSES */
