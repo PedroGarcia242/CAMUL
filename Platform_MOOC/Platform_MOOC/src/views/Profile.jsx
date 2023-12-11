@@ -8,6 +8,9 @@ import profile_background from '../assets/background_texture.png';
 import module1 from '../assets/module_1.png';
 import module2 from '../assets/module_2.png';
 import module3 from '../assets/module_3.png';
+import quiz1 from '../assets/quiz_one.png';
+import quiz2 from '../assets/quiz_two.png';
+import quiz3 from '../assets/quiz_three.png';
 import userIcon from '../assets/user_icon.png';
 
 const Profile = () => {
@@ -29,16 +32,27 @@ const Profile = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
-    const handleMetricsClick = () => {
-        navigate('/Metrics');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+    const handleQuizClick = (module) => {
+        var url;
+        switch (module) {
+            case 2:
+                url = "https://docs.google.com/forms/d/e/1FAIpQLSf7OFIM22WWyIzHGZR55LKJ_v8nyB7SjtEFGd9zWOhRgQQurQ/viewform";
+                break;
+            case 3:
+                url = "https://docs.google.com/forms/d/e/1FAIpQLSdogYZ7HQ0iP4VF5NO4uWxm75lWT16TrZJWcUn0xleNH0zuRw/viewform?pli=1";
+                break;
+            default:
+                url = "https://docs.google.com/forms/d/e/1FAIpQLSdqUsUVb7jxBc2lQHWOOcr4iRhPGNOl42dE1M36NvaIfGLD7w/viewform";
+                break;
+        }
+        window.open(url, '_blank');
     };
 
     const moduleOneDetails = () => {
         return (
             <>
-                <div className="module_one_details" onClick={handleMetricsClick}>
-
+                <div className="module-one-details" onClick={() => handleQuizClick(1)}>
+                    <img src={quiz1} alt="Quiz Module One" />
                 </div>
             </>
         )
@@ -47,7 +61,8 @@ const Profile = () => {
     const moduleTwoDetails = () => {
         return (
             <>
-                <div className="module_two_details" >
+                <div className="module-two-details" onClick={() => handleQuizClick(2)}>
+                    <img src={quiz2} alt="Quiz Module Two"/>
                 </div>
             </>
         )
@@ -56,7 +71,8 @@ const Profile = () => {
     const moduleThreeDetails = () => {
         return (
             <>
-                <div className="module_three_details" >
+                <div className="module-three-details" onClick={() => handleQuizClick(3)}>
+                    <img src={quiz3} alt="Quiz Module Three" />
                 </div>
             </>
         )

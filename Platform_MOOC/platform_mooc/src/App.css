@@ -216,7 +216,7 @@ li {
 .banner {
     width: 100%;
     position: absolute;
-    height: 300px;
+    height: 280px;
     background: #E1DFCB;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 10;
@@ -226,8 +226,8 @@ li {
     display: flex;
     position: relative;
     width: 100%;
-    margin-top: 110px;
-    margin-bottom: 25px;
+    margin-top: 90px;
+    margin-bottom: 45px;
     flex-direction: row;
     justify-content: space-between;
     z-index: 20;
@@ -235,11 +235,13 @@ li {
 
 .profile {
     padding-left: 12%;
+    padding-top: 50px;
+    padding-bottom: 20px;
 }
 
-.picture {
-    width: 300px;
-    height: 300px;
+.picture {  
+    width: 250px;
+    height: 250px;
     background: #f5f7fa;
     border-radius: 30px;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
@@ -253,7 +255,7 @@ li {
 
 
 .square {
-    width: 270px;
+    width: 250px;
     height: 360px;
     background: #f5f7fa;
     border-radius: 23px;
@@ -266,7 +268,7 @@ li {
     padding-top: 15px;
     margin-top: 15px;
     display: flex;
-    width: 300px;
+    width: 250px;
     min-height: 445px;
     background: #f5f7fa;
     flex-direction: column;
@@ -296,7 +298,7 @@ li {
 .progress {
     height: 40px;
     margin-top: 20px;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
     margin-left: 1%;
     margin-right: 1%;
     width: 98%;
@@ -307,7 +309,7 @@ li {
 .modules {
     display: flex;
     border-radius: 35px;
-    min-height: 548px;
+    min-height: 558px;
     flex-direction: row;
     justify-content: space-between;
 }
@@ -327,7 +329,7 @@ li {
     border-radius: 23px;
     height: 68%;
     overflow: hidden;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .chapter_immage {
@@ -356,21 +358,35 @@ li {
         border-radius: 30px;
     }
 
-.module_one_details,
-.module_two_details,
-.module_three_details {
-    background: #f5f7fa;
+.module-one-details,
+.module-two-details,
+.module-three-details {
+    background: #E1DFCB;
     border-radius: 23px;
     height: 28%;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    margin: 0 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
-    .module_one_details:hover,
-    .module_two_details:hover,
-    .module_three_details:hover {
+    .module-one-details:hover,
+    .module-two-details:hover,
+    .module-three-details:hover {
         cursor: pointer;
         transform: scale(1.05);
         border-radius: 30px;
+    }
+
+    .module-one-details img,
+    .module-two-details img,
+    .module-three-details img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        scale:2;
     }
 
 .video-container {
@@ -908,7 +924,6 @@ h1.module-three-selected-chapter {
 }
 
 /* OVERWRITE BOOTSTRAP CLASSES */
-
 .module-details .nav-link {
     color: #252525;
     border-radius: 0;
