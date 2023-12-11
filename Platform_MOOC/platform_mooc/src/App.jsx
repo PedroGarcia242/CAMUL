@@ -6,11 +6,15 @@ import Home from './views/Home';
 import Info from './views/Info';
 import Profile from './views/Profile';
 
+import Login from './views/Login';
+
 import ModuleOne from './views/moduleOne/ModuleOne';
 import ModuleTwo from './views/moduleTwo/ModuleTwo';
 import ModuleThree from './views/moduleThree/ModuleThree';
 
 import Metrics from './views/moduleMetrics/Metrics';
+
+
 /*
 import ModuleTwoL1 from './views/moduleTwo/ModuleTwoL1';
 import ModuleTwoL2 from './views/moduleTwo/ModuleTwoL2';
@@ -26,9 +30,13 @@ import ModuleTwoQuizL5 from './views/moduleTwo/ModuleTwoQuizL5';
 
 function App() {
 
+    window.isLoggedIn = true;
+
     const HomePage = () => <Home />;
     const InfoPage = () => <Info />;
     const ProfilePage = () => <Profile />;
+
+    const LoginPage = () => <Login />;
 
     const ModuleOnePage = () => <ModuleOne />;
     const ModuleTwoPage = () => <ModuleTwo />;
@@ -58,8 +66,11 @@ function App() {
                 <nav className="navbar">
                     <ul className="navbar-items">
                         <li className="text-button"><Link to="/">HOME</Link></li>
-                        <li className="text-button"><Link to="/profile">PROFILE</Link></li>
                         <li className="text-button"><Link to="/info">INFO</Link></li>
+                        <li className="text-button"><Link to="/profile">PROFILE</Link></li>
+                        <li className="text-button"><Link to="/Login">LOGIN</Link></li>
+                        <li className="text-button"><Link to="/Metrics">METRICS</Link></li>
+
                     </ul>
                     <ul className="navbar-items">
                         <li className="text-button"><Link to="/ModuleOne/1">MODULE 1</Link></li>
@@ -81,6 +92,8 @@ function App() {
                     <Route path="/" element={<HomePage />} />
                     <Route path="/Info" element={ <InfoPage /> } />
                     <Route path="/Profile" element={<ProfilePage />} />
+
+                    <Route path="/Login" element={<LoginPage />} />
 
                     <Route path="/ModuleOne/:currentLessonNumber" element={<ModuleOnePage />} />
                     <Route path="/ModuleTwo/:currentLessonNumber" element={<ModuleTwoPage />} />
