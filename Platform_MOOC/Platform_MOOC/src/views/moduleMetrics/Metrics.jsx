@@ -2,6 +2,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import BarChart from './BarChart'
+import overallMetrics from '../../assets/overall_metrics.png';
+import homeBackground from '../../assets/background_texture.png';
 
 const Metrics = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -171,21 +173,40 @@ const Metrics = () => {
     const moduleThreeKeys = [
         'you',
         'average'
-    ];
+    ];  
 
     return (
         <>
             <Col className="content-metrics-page">
-                <Row className="global-metrics">
-                    <Col>{BarChart(averageData, averageKeys, "module", "modules", "scores", "paired")}</Col>
-                    <Col>{BarChart(averageData, averageKeys, "module", "modules", "scores", "paired")}</Col>
-                </Row>
-                <Row className="module-metrics">
-                    <Col>{BarChart(moduleOneData, moduleOneKeys, "lesson", "modules", "scores", "set2")}</Col>
-                    <Col>{BarChart(moduleTwoData, moduleTwoKeys, "lesson", "modules", "scores", "nivo")}</Col>
-                    <Col>{BarChart(moduleThreeData, moduleThreeKeys, "lesson", "modules", "scores", "spectral")}</Col>
-                </Row>
-                {displayFooter()}
+                <img className="background-home" src={homeBackground} alt="" />
+
+                <div style={{ zIndex: 10, position: 'relative' }}>
+                    <Row className="global-metrics">
+                        <Col className="metrics-col">
+                            <h3>Module Progression</h3>
+                            <img className="overall-metrics" src={overallMetrics} alt="Overall Metrics" />
+                        </Col>
+                        <Col className="metrics-col">
+                            <h3>Average Comparison</h3>
+                            {BarChart(averageData, averageKeys, "module", "modules", "scores", "paired")}
+                        </Col>
+                    </Row>
+                    <Row className="module-metrics">
+                        <Col className="metrics-col">
+                            <h3>Module 1 Average Comparison</h3>
+                            {BarChart(moduleOneData, moduleOneKeys, "lesson", "lessons", "scores", "dark2")}
+                        </Col>
+                        <Col className="metrics-col">
+                            <h3>Module 2 Average Comparison</h3>
+                            {BarChart(moduleTwoData, moduleTwoKeys, "lesson", "lessons", "scores", "nivo")}
+                        </Col>
+                        <Col className="metrics-col">
+                            <h3>Module 3 Average Comparison</h3>
+                            {BarChart(moduleThreeData, moduleThreeKeys, "lesson", "lessons", "scores", "purpleRed_green")}
+                        </Col>
+                    </Row>
+                </div>
+                {displayFooter()}   
             </Col>
         </>
     );
