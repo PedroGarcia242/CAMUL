@@ -268,7 +268,7 @@ li {
     display: flex;
     width: 300px;
     min-height: 445px;
-    background: #E1DFCB;
+    background: #f5f7fa;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -284,8 +284,13 @@ li {
 .mooc {
     padding-right: 12%;
     width: 100%;
-    margin-top: 100px;
+    margin-top: 60px;
     margin-left: 30px;
+}
+.mooc h2 {
+    height: 20px;
+    padding: 0 20px 40px;
+    text-align: left;
 }
 
 .progress {
@@ -300,12 +305,9 @@ li {
 }
 
 .modules {
-    padding: 0.5rem;
     display: flex;
-    background: #E1DFCB;
     border-radius: 35px;
-    min-height: 540px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    min-height: 548px;
     flex-direction: row;
     justify-content: space-between;
 }
@@ -360,7 +362,7 @@ li {
     background: #f5f7fa;
     border-radius: 23px;
     height: 28%;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
     .module_one_details:hover,

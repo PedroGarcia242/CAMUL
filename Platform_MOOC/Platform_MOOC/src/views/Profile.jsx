@@ -32,7 +32,9 @@ const Profile = () => {
     const moduleOneDetails = () => {
         return (
             <>
-                <div className="module_one_details" />
+                <div className="module_one_details" >
+
+                </div>
             </>
         )
     }
@@ -40,7 +42,8 @@ const Profile = () => {
     const moduleTwoDetails = () => {
         return (
             <>
-                <div className="module_two_details" />
+                <div className="module_two_details" >
+                </div>
             </>
         )
     }
@@ -48,7 +51,8 @@ const Profile = () => {
     const moduleThreeDetails = () => {
         return (
             <>
-                <div className="module_three_details" />
+                <div className="module_three_details" >
+                </div>
             </>
         )
     }
@@ -86,6 +90,7 @@ const Profile = () => {
                             </div>
                         </div>
                         <div className="mooc">
+                            <h2>User Name</h2>
                             <ProgressBar striped variant="success" now={70} />
 
                             <Row className="modules">
