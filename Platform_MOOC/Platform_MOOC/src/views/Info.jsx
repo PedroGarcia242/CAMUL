@@ -1,8 +1,15 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Container from 'react-bootstrap/Container';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
+import Tab from 'react-bootstrap/Tab';
+import Tabs from 'react-bootstrap/Tabs';
+import Accordion from 'react-bootstrap/Accordion';
 
-import infoBackground from '../assets/INFO_BG.png';
+import infoBackground from '../assets/background_texture.png';
 
 const Info = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 
     const displayFooter = () => {
         return (
@@ -16,88 +23,54 @@ const Info = () => {
     return (
         <>
             <div className="content-info-page">
-                <img className="background" src={infoBackground} alt="" />
+                <img className="background-home" src={infoBackground} alt="" />
 
-                <div className="info-header">
-                    <h2>Do you need answers?</h2>
-                    <div className="info-header-content">
-                        <h5>You came to the right place</h5>
-                    </div>
-                </div>
-
-                <div className="container-fluid mb-4">
-                    <form className="d-flex justify-content-center" role="search">
-                        <input className="form-control me-2 text-input-info-page" type="search" placeholder="Search" aria-label="Search" />
-                        <button className="btn btn-outline-success" type="submit">Search</button>
-                    </form>
-                </div>
-
-
-                <div className="module-details pt-4">
-                    <h2>Frequently Asked Questions</h2>
-                    <div className="container pb-4 d-flex justify-content-center">
-                        <div className="accordion accordion-class" id="accordionExample">
-                            <div className="accordion-item">
-                                <h2 className="accordion-header">
-                                    <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        Accordion Item #1
-                                    </button>
-                                </h2>
-                                <div id="collapseOne" className="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                                    <div className="accordion-body">
-                                        <strong>This is the first items accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. Its also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="accordion-item">
-                                <h2 className="accordion-header">
-                                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        Accordion Item #2
-                                    </button>
-                                </h2>
-                                <div id="collapseTwo" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                    <div className="accordion-body">
-                                        <strong>This is the second items accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. Its also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="accordion-item">
-                                <h2 className="accordion-header">
-                                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        Accordion Item #3
-                                    </button>
-                                </h2>
-                                <div id="collapseThree" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                    <div className="accordion-body">
-                                        <strong>This is the third items accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. Its also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                                    </div>
-                                </div>
-                            </div>
+                <div style={{ zIndex: 10, position: 'relative' }}>
+                    <div className="info-header">
+                        <h2>Do you need answers?</h2>
+                        <div className="info-header-content mb-5">
+                            <h5>You came to the right place</h5>
                         </div>
                     </div>
-                </div>
 
-                <div className="container mt-4">
-                    <h2>Insert Review</h2>
-                    <div className="form-group">
-                        <label htmlFor="reviewTextarea">Your Review:</label>
-                        <textarea className="form-control form-control-lg" id="reviewTextarea" rows="6" placeholder="Write your review here..."></textarea>
+
+                    <div className="faq-details">
+                        <h2 className="my-4">Frequently Asked Questions</h2>
+                        <div className="faq-content">
+                            <Accordion defaultActiveKey="0">
+                                <Accordion.Item eventKey="0">
+                                    <Accordion.Header>How much does your product cost?</Accordion.Header>
+                                    <Accordion.Body>
+                                        <h6>Nothing! Our product is free. Come experience our course and learn all about Marketing and Communication.</h6>
+                                    </Accordion.Body>
+                                </Accordion.Item>
+                                <Accordion.Item eventKey="1">
+                                    <Accordion.Header>Module Two</Accordion.Header>
+                                    <Accordion.Body>
+                                        <h6>ASDSADASDAS</h6>
+                                    </Accordion.Body>
+                                </Accordion.Item>
+                                <Accordion.Item eventKey="2">
+                                    <Accordion.Header>Module Three</Accordion.Header>
+                                    <Accordion.Body>
+                                        <h6>ASDSADASDAS</h6>
+                                    </Accordion.Body>
+                                </Accordion.Item>
+                            </Accordion>
+                        </div>
                     </div>
+
+                    <div className="container mt-4">
+                        <h2>Send a Review</h2>
+                        <div className="form-group mb-5">
+                            <h5 className="mb-3">Help us improve</h5>
+                            <textarea className="form-control form-control-lg" id="reviewTextarea" rows="6" placeholder="Write your review here..."></textarea>
+                        </div>
+                    </div>
+
+                    {displayFooter()}
                 </div>
-
-
-                <div className="video-container">
-                    <div className="video-background" />
-                    <h2>Tutorial in how to use the Website</h2>
-                    <iframe
-                        src="https://www.youtube.com/embed/Ufs0Y6HkPD4"
-                        frameBorder="0"
-                        allowFullScreen
-                    ></iframe>
-                </div>
-
             </div>
-            {displayFooter()}
         </>
     );
 };

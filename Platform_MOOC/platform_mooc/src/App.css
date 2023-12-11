@@ -160,9 +160,7 @@ li {
     position: absolute;
     top: 0;
     background: #f5f7fa;
-    /*background-image: linear-gradient(#b16161, #d1caa1);*/
 }
-
 .content-module-one {
     position: relative;
     background-image: linear-gradient(#0E2417, #374530);
@@ -170,35 +168,16 @@ li {
 .content-module-two {
     position: relative;
     background-image: linear-gradient(#b16161, #d1caa1);
-    height: 3000px;
 }
 .content-module-three {
     position: relative;
     background-image: linear-gradient(#32213a, #5B4F5A);
 }
-/*
-
-
-
-
- 
-*/
-.text-input-info-page {
-    width: 350px; /* Adjust width as needed */
-    font-size: 0.8rem; /* Adjust font size as needed */
-    padding: 0.25rem 0.5rem; /* Adjust padding as needed */
-}
-
-.accordion-class {
-    max-width: 800px; /* Adjust width as needed */
-}
-
 
 .content-info-page,
 .content-home-page {
     position: relative;
     background: #f5f7fa;
-    /*background-image: linear-gradient(#B8B8FF, #f5f7fa);*/
 }
 
 .background {
@@ -234,7 +213,7 @@ li {
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
-    opacity: 20%;
+    opacity: 30%;
 }
 
 .banner {
@@ -841,6 +820,29 @@ h1.module-three-selected-chapter {
         background-image: var(--bs-accordion-btn-icon);
         filter: invert(1);
     }
+
+
+
+.faq {
+    background: #E1DFCB;
+    margin-top: 30px;
+    margin-bottom: 100px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+    .faq h2 {
+        color: #252525;
+    }
+
+    .faq h3 {
+        color: #252525;
+    }
+
+.faq-content {
+    padding: 0 15%;
+}
 
 /* OVERWRITE BOOTSTRAP CLASSES */
 

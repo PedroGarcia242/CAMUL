@@ -11,6 +11,7 @@ import module3 from '../assets/module_3.png';
 import userIcon from '../assets/user_icon.png';
 
 const Profile = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     const navigate = useNavigate();
 
     const handleModuleOneClick = () => {

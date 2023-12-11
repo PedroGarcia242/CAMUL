@@ -149,6 +149,126 @@ const Home = () => {
         )
     }
 
+    const moduleTwoLessonOne = () => {
+        return (
+            <>
+                <div className="lesson-content">
+                    <h5 className="mb-3">Lesson 1: Ethical Dilemmas in Marketing</h5>
+                    <h6> - Objective: Understand what is deceptive advertising and what are some of the ethical challenges found in digital marketing</h6>
+                    <h6> - Chapters: Understanding Ethical Marketing; Ehtical Dilemmas in Marketing; Strategies to Navigate Ethical Dilemmas </h6>
+                </div>
+            </>
+        )
+    }
+
+    const moduleTwoLessonTwo = () => {
+        return (
+            <>
+                <div className="lesson-content">
+                    <h5 className="mb-3">Lesson 2: Legal Regulations</h5>
+                    <h6> - Objective: Learn about intellectual property rights and trademarks, as well as GDPR and Data Protection Laws</h6>
+                    <h6> - Chapters: Understanding Legal Regulations in Marketing; Key Legal Regulations in Marketing; Ensuring Compliance and Best Practices</h6>
+                </div>
+            </>
+        )
+    }
+
+    const moduleTwoLessonThree = () => {
+        return (
+            <>
+                <div className="lesson-content">
+                    <h5 className="mb-3">Lesson 3: Social Responsibility and Sustainability</h5>
+                    <h6> - Objective: Learn about Sustainable Marketing Practices and Corporate Social Responsibility (CSR) initiatives</h6>
+                    <h6> - Chapters: Understanding Social Responsibility and sustainability; Pratical Strategies for Social Responsability and Sustainability; Monitoring and Reporting</h6>
+                </div>
+            </>
+        )
+    }
+
+    const moduleTwoLessonFour = () => {
+        return (
+            <>
+                <div className="lesson-content">
+                    <h5 className="mb-3">Lesson 4: Crisis Communication</h5>
+                    <h6> - Objective: Learn how to handle public relations during scandals or crises and how to build trust between your brand and customers</h6>
+                    <h6> - Chapters: Understanding Crisis Communication; Key Strategies for Crisis Communication; Rebuilding Trust</h6>
+                </div>
+            </>
+        )
+    }
+
+    const moduleTwoLessonFive = () => {
+        return (
+            <>
+                <div className="lesson-content">
+                    <h5 className="mb-3">Lesson 5: Responsible Advertising and Social Impact</h5>
+                    <h6> - Objective: Understand what are socially responsible advertising campaigns and how to address social issues through marketing</h6>
+                    <h6> - Chapters: Understanding Responsible Advertising; Key Elements of Socially Responsible Advertising; Addressing Social Issues through Marketing</h6>
+                </div>
+            </>
+        )
+    }
+
+    const moduleThreeLessonOne = () => {
+        return (
+            <>
+                <div className="lesson-content">
+                    <h5 className="mb-3">Lesson 1: Understanding the Essentials of Marketing Planning</h5>
+                    <h6> - Objective: Understand the purpose of a Marketing Plan; Know the role of the Marketing Plan in achieving business objectives; Understand what is a Target Audience and ways to identify it</h6>
+                    <h6> - Chapters: What is a Marketing Plan?; Target Audience Identification </h6>
+                </div>
+            </>
+        )
+    }
+
+    const moduleThreeLessonTwo = () => {
+        return (
+            <>
+                <div className="lesson-content">
+                    <h5 className="mb-3">Lesson 2: Setting Marketing Objectives and Strategy with AIDA</h5>
+                    <h6> - Objective: Can create SMART objectives; Can align marketing objectives with the overall business strategy; Understands the AIDA Model and how to apply it to marketing strategy</h6>
+                    <h6> - Chapters: Marketing Objectives; AIDA Model in Marketing Strategy</h6>
+                </div>
+            </>
+        )
+    }
+
+    const moduleThreeLessonThree = () => {
+        return (
+            <>
+                <div className="lesson-content">
+                    <h5 className="mb-3">Lesson 3: Developing Creative and Persuasive Marketing Materials</h5>
+                    <h6> - Objective: Understand what are Creative Elements; Recognize the importance of Creative Elements in the creation of Marketing Materials; Understand the role Storytelling plays in Marketing; Recognizes the different types of stories that can be communicated to the audience</h6>
+                    <h6> - Chapters: Creative Elements in Marketing; The Role of Storytelling in Marketing</h6>
+                </div>
+            </>
+        )
+    }
+
+    const moduleThreeLessonFour = () => {
+        return (
+            <>
+                <div className="lesson-content">
+                    <h5 className="mb-3">Lesson 4: Implementation of Marketing Plans</h5>
+                    <h6> - Objective: Is able to connect the AIDA model with Creative Elements; Understand what are Action Plans; Can implement an Action Plan</h6>
+                    <h6> - Chapters: AIDA model revisited; Developing an Action Plan</h6>
+                </div>
+            </>
+        )
+    }
+
+    const moduleThreeLessonFive = () => {
+        return (
+            <>
+                <div className="lesson-content">
+                    <h5 className="mb-3">Lesson 5: Monitorization and Evaluation of Marketing Plans</h5>
+                    <h6> - Objective: Recognizes the importance of monitoring progress; Knows about different tools and ways of monitoring an Action Plan and as consequence a Marketing Plan; Knows different methods of analyzing results; Understands the role and importance of ROI and other metrics in monitoring and optimizing plans</h6>
+                    <h6> - Chapters: Monitoring and adjusting; Analyzing results and ROI</h6>
+                </div>
+            </>
+        )
+    }
+
     const moduleOneDetails = () => {
         return (
             <>
@@ -179,6 +299,82 @@ const Home = () => {
                             </Tab>
                             <Tab eventKey="lesson-5" title="Lesson Five">
                                 {moduleOneLessonFive()}
+                            </Tab>
+                        </Tabs>
+                    </div>
+                </div>
+            </>
+        )
+    }
+
+    const moduleTwoDetails = () => {
+        return (
+            <>
+                <div className="details-module" >
+                    <div className="details-module-title">
+                        <h4>Ethics and Regultaion</h4>
+                    </div >
+                    <div className="details-module-content">
+                        <Tabs
+                            defaultActiveKey="lesson-1"
+                            transition={false}
+                            id="noanim-tab-example"
+                            className="mb-3"
+                            variant="underline"
+                            fill
+                        >
+                            <Tab eventKey="lesson-1" title="Lesson One">
+                                {moduleTwoLessonOne()}
+                            </Tab>
+                            <Tab eventKey="lesson-2" title="Lesson Two">
+                                {moduleTwoLessonTwo()}
+                            </Tab>
+                            <Tab eventKey="lesson-3" title="Lesson Three">
+                                {moduleTwoLessonThree()}
+                            </Tab>
+                            <Tab eventKey="lesson-4" title="Lesson Four">
+                                {moduleTwoLessonFour()}
+                            </Tab>
+                            <Tab eventKey="lesson-5" title="Lesson Five">
+                                {moduleTwoLessonFive()}
+                            </Tab>
+                        </Tabs>
+                    </div>
+                </div>
+            </>
+        )
+    }
+
+    const moduleThreeDetails = () => {
+        return (
+            <>
+                <div className="details-module" >
+                    <div className="details-module-title">
+                        <h4>Creating and Managing a Marketing Plan</h4>
+                    </div >
+                    <div className="details-module-content">
+                        <Tabs
+                            defaultActiveKey="lesson-1"
+                            transition={false}
+                            id="noanim-tab-example"
+                            className="mb-3"
+                            variant="underline"
+                            fill
+                        >
+                            <Tab eventKey="lesson-1" title="Lesson One">
+                                {moduleThreeLessonOne()}
+                            </Tab>
+                            <Tab eventKey="lesson-2" title="Lesson Two">
+                                {moduleThreeLessonTwo()}
+                            </Tab>
+                            <Tab eventKey="lesson-3" title="Lesson Three">
+                                {moduleThreeLessonThree()}
+                            </Tab>
+                            <Tab eventKey="lesson-4" title="Lesson Four">
+                                {moduleThreeLessonFour()}
+                            </Tab>
+                            <Tab eventKey="lesson-5" title="Lesson Five">
+                                {moduleThreeLessonFive()}
                             </Tab>
                         </Tabs>
                     </div>
@@ -240,20 +436,20 @@ const Home = () => {
                                 <Accordion.Item eventKey="1">
                                     <Accordion.Header className="module-two">Module Two</Accordion.Header>
                                     <Accordion.Body>
-                                        {moduleOneDetails()}
+                                        {moduleTwoDetails()}
                                     </Accordion.Body>
                                 </Accordion.Item>
                                 <Accordion.Item eventKey="2">
                                     <Accordion.Header className="module-three">Module Three</Accordion.Header>
                                     <Accordion.Body>
-                                        {moduleOneDetails()}
+                                        {moduleThreeDetails()}
                                     </Accordion.Body>
                                 </Accordion.Item>
                             </Accordion>
                         </div>
                     </div>
+                    {displayFooter()}
                 </div>
-                {displayFooter()}
             </div>
         </>
     );
