@@ -23,7 +23,7 @@ export default function SignUpView() {
                     <h2>Create an Account</h2>
 
                     <Form.Control className="mb-3" type="email" placeholder="Email Address *" />
-                    <Form.Control className="mb-4" type="password" placeholder="Password *" />
+                    <Form.Control className="mb-3" type="password" placeholder="Password *" />
                     <Form.Control className="mb-4" type="password" placeholder="Confirm Password *" />
 
                     <Button variant="success" className="login-button w-100 mb-3" type="submit">Sign Up</Button>
