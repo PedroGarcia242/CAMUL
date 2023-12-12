@@ -123,7 +123,7 @@ const Info = () => {
 
                         <div className="video-container-info">
                             <iframe width="1120" height="630"
-                                src="https://www.youtube.com/embed/Ufs0Y6HkPD4?si=DzG8rxLafODpVdr3" title="YouTube video player"
+                                src="https://www.youtube.com/embed/pKwnhuF1Ick?si=SOjfuPrvxRoSU8_x" title="YouTube video player"
                                 frameBorder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowfullscreen
