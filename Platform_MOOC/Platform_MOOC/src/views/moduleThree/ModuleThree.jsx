@@ -18,7 +18,7 @@ const ModuleThree = () => {
         currentLessonNumber = '1';
     }
     const goToYoutubeChannel = () => {
-        window.location.href = 'https://youtu.be/oeh2TKq6PF4?feature=shared';
+        window.location.href = 'https://www.youtube.com/@CAMUL2023';
     };
     const goToInstaProfile = () => {
         window.location.href = 'https://www.instagram.com/mrktng_cmmnctn/?next=%2Fd';
