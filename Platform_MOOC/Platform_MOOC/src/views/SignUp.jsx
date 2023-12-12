@@ -4,13 +4,19 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
 import loginBanner from '../assets/login_banner.png';
+import loginTexture from '../assets/login_texture.png';
 
 export default function SignUpView() {
+
+    const goToInstaProfile = () => {
+        const url = 'https://www.instagram.com/mrktng_cmmnctn/?next=%2Fd';
+        window.open(url, '_blank');
+    };
 
     return (
         <Row className="login-page">
             <Col className="d-none d-md-flex h-100 p-0" md={6}>
-                <img src={loginBanner} alt="" className="login-banner"/>
+                <img src={loginBanner} alt="" className="login-banner" onClick={goToInstaProfile} />
             </Col>
             <Col className="login-form-container" md={4}>
                 <Form className="login-form">
@@ -28,6 +34,7 @@ export default function SignUpView() {
                 </Form>
             </Col>
             <Col className="login-extra d-none d-md-flex h-100 p-0" md={2}>
+                <img src={loginTexture} alt="" className="login-texture" />
             </Col>
         </Row>
     );

@@ -23,10 +23,12 @@ const ModuleOne = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
     const goToYoutubeChannel = () => {
-        window.location.href = 'https://www.youtube.com/@CAMUL2023';
+        const url = 'https://www.youtube.com/@CAMUL2023';
+        window.open(url, '_blank');
     };
     const goToInstaProfile = () => {
-        window.location.href = 'https://www.instagram.com/mrktng_cmmnctn/?next=%2Fd';
+        const url = 'https://www.instagram.com/mrktng_cmmnctn/?next=%2Fd';
+        window.open(url, '_blank');
     };
     const handleNextLessonClick = () => {
         var nextLesson = + currentLessonNumber + 1;
@@ -149,7 +151,7 @@ const ModuleOne = () => {
         return (
             <>
                 <div className="card" onClick={handleTranscriptClick}>
-                    <img className="card-img" src={transcriptImage} alt="transcript" />
+                    <img className="card-img" src={transcriptImage} alt="transcript" style={{ top: 10 + 'px' }} />
                     <div className="card-content">
                         <h1 className="card-title">
                         Transcripts
@@ -167,7 +169,7 @@ const ModuleOne = () => {
         return (
             <>
                 <div className="card" onClick={handleYoutubeClick} >
-                    <img className="card-img" src={youtubeImage} alt="youtube" style={{ top: -40 + 'px'}} />
+                    <img className="card-img" src={youtubeImage} alt="youtube" style={{ top: 5 + 'px'}} />
                     <div className="card-content">
                         <h1 className="card-title">
                             Youtube
@@ -185,7 +187,7 @@ const ModuleOne = () => {
         return (
             <>
                 <div className="card" onClick={handleQuizClick} >
-                    <img className="card-img" src={quizImage} alt="quiz" />
+                    <img className="card-img" src={quizImage} alt="quiz" style={{ top: 10 + 'px' }} />
                     <div className="card-content">
                         <h1 className="card-title">
                             Quiz

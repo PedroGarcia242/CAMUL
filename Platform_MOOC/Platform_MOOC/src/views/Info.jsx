@@ -16,10 +16,12 @@ const Info = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
     const goToYoutubeChannel = () => {
-        window.location.href = 'https://www.youtube.com/@CAMUL2023';
+        const url = 'https://www.youtube.com/@CAMUL2023';
+        window.open(url, '_blank');
     };
     const goToInstaProfile = () => {
-        window.location.href = 'https://www.instagram.com/mrktng_cmmnctn/?next=%2Fd';
+        const url = 'https://www.instagram.com/mrktng_cmmnctn/?next=%2Fd';
+        window.open(url, '_blank');
     };
 
     const displayFooter = () => {
@@ -119,13 +121,15 @@ const Info = () => {
                     <div className="tutorial-video mt-5">
                         <h2 className="mb-2">Tutorial Video</h2>
 
-                        <iframe width="1120" height="630"
-                            src="https://www.youtube.com/embed/Ufs0Y6HkPD4?si=DzG8rxLafODpVdr3" title="YouTube video player"
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen
-                            className="mt-3"
-                        ></iframe>
+                        <div className="video-container-info">
+                            <iframe width="1120" height="630"
+                                src="https://www.youtube.com/embed/Ufs0Y6HkPD4?si=DzG8rxLafODpVdr3" title="YouTube video player"
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen
+                                className="mt-3"
+                            ></iframe>
+                        </div>
                     </div>
 
 

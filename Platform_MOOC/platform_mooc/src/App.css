@@ -175,6 +175,16 @@ li {
     object-fit: cover;
     background-color: #d1caa1;
 }
+.login-texture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: #d1caa1;
+}
+
+    .login-banner:hover {
+        cursor: pointer;
+    }
 
 .login-form-container {
     display: flex;
@@ -620,7 +630,7 @@ li {
     }
 
 .card-img {
-    padding: 10px;
+    padding: 20px;
     position: absolute;
     top: 0;
 }
@@ -783,7 +793,7 @@ h1.module-three-selected-chapter {
     margin-bottom: 100px;
     padding-top: 30px;
     padding-bottom: 20px;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
     .module-details h2 {
@@ -1011,7 +1021,7 @@ h1.module-three-selected-chapter {
     padding-right: 5%;
     padding-left: 5%;
     padding-top: 35px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     margin-bottom: 100px;
 }
 
@@ -1043,9 +1053,10 @@ h1.module-three-selected-chapter {
     background: #E1DFCB;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
-.tutorial-video iframe {
-    border-radius: 10px;
-}
+
+    .video-container-info iframe {
+        border-radius: 10px;
+    }
 
 :focus {
     outline: 0 !important;
@@ -1114,3 +1125,6 @@ h1.module-three-selected-chapter {
     height: 40px;
     margin: 15px 15px 0;
 }
+    .social-icon:hover {
+        cursor: pointer;
+    }

@@ -9,11 +9,14 @@ import igramfooter from '../../assets/instagram_footer.png';
 
 const Metrics = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+
     const goToYoutubeChannel = () => {
-        window.location.href = 'https://www.youtube.com/@CAMUL2023';
+        const url = 'https://www.youtube.com/@CAMUL2023';
+        window.open(url, '_blank');
     };
     const goToInstaProfile = () => {
-        window.location.href = 'https://www.instagram.com/mrktng_cmmnctn/?next=%2Fd';
+        const url = 'https://www.instagram.com/mrktng_cmmnctn/?next=%2Fd';
+        window.open(url, '_blank');
     };
     const displayFooter = () => {
         return (

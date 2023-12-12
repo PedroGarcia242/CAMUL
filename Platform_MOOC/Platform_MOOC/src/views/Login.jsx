@@ -8,6 +8,11 @@ import loginTexture from '../assets/login_texture.png';
 
 export default function LogInView() {
 
+    const goToInstaProfile = () => {
+        const url = 'https://www.instagram.com/mrktng_cmmnctn/?next=%2Fd';
+        window.open(url, '_blank');
+    };
+
     const handleSubmit = () => {
         localStorage['isLoggedIn'] = 'true';
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -17,7 +22,7 @@ export default function LogInView() {
     return (
         <Row className="login-page">
             <Col className="d-none d-md-flex h-100 p-0" md={6}>
-                <img src={loginBanner} alt="" className="login-banner"/>
+                <img src={loginBanner} alt="" className="login-banner" onClick={goToInstaProfile} />
             </Col>
             <Col className="login-form-container" md={4}>
                 <Form className="login-form">
@@ -34,7 +39,7 @@ export default function LogInView() {
                 </Form>
             </Col>
             <Col className="login-extra d-none d-md-flex h-100 p-0" md={2}>
-                <img src={loginTexture} alt="" className="login-banner" />
+                <img src={loginTexture} alt="" className="login-texture" />
             </Col>
         </Row>
     );
