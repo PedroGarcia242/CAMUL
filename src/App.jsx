@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './App.css'
 
 import Home from './views/Home';
@@ -16,6 +17,7 @@ import ModuleThree from './views/moduleThree/ModuleThree';
 import Metrics from './views/moduleMetrics/Metrics';
 
 function App() {
+    const navigate = useNavigate();
 
     var isLoggedInString = localStorage['isLoggedIn'] || 'false';
     var isLoggedIn = (isLoggedInString === "true");
@@ -36,7 +38,8 @@ function App() {
     const logOut = () => {
         localStorage['isLoggedIn'] = 'false';
         window.scrollTo({ top: 0, behavior: 'smooth' });
-        this.forceUpdate();
+        navigate('/Login');
+        window.location.reload();
     };
     //FUNCTIONS
     //navbar
@@ -69,35 +72,33 @@ function App() {
     //the base content of the page
     return (
         <>
-            <Router>
-                {displayNavbar()}
-                <Routes>
-                    <Route path="/" element={<HomePage />} />
-                    <Route path="/Info" element={ <InfoPage /> } />
-                    <Route path="/Profile" element={<ProfilePage />} />
+            {displayNavbar()}
+            <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/Info" element={ <InfoPage /> } />
+                <Route path="/Profile" element={<ProfilePage />} />
 
-                    <Route path="/LogIn" element={<LogInPage />} />
-                    <Route path="/SignUp" element={<SignUpPage />} />
+                <Route path="/LogIn" element={<LogInPage />} />
+                <Route path="/SignUp" element={<SignUpPage />} />
 
-                    <Route path="/ModuleOne/:currentLessonNumber" element={<ModuleOnePage />} />
-                    <Route path="/ModuleTwo/:currentLessonNumber" element={<ModuleTwoPage />} />
-                    <Route path="/ModuleThree/:currentLessonNumber" element={<ModuleThreePage />} />
+                <Route path="/ModuleOne/:currentLessonNumber" element={<ModuleOnePage />} />
+                <Route path="/ModuleTwo/:currentLessonNumber" element={<ModuleTwoPage />} />
+                <Route path="/ModuleThree/:currentLessonNumber" element={<ModuleThreePage />} />
 
-                    <Route path="/Metrics" element={<MetricsPage />} />
-                    {/*
-                    <Route path="/ModuleTwoL1" element={<ModuleTwoL1Page />} />
-                    <Route path="/ModuleTwoL2" element={<ModuleTwoL2Page />} />
-                    <Route path="/ModuleTwoL3" element={<ModuleTwoL3Page />} />
-                    <Route path="/ModuleTwoL4" element={<ModuleTwoL4Page />} />
-                    <Route path="/ModuleTwoL5" element={<ModuleTwoL5Page />} />
-                    <Route path="/ModuleTwoQuizL1" element={<ModuleTwoQuizL1Page />} />
-                    <Route path="/ModuleTwoQuizL2" element={<ModuleTwoQuizL2Page />} />
-                    <Route path="/ModuleTwoQuizL3" element={<ModuleTwoQuizL3Page />} />
-                    <Route path="/ModuleTwoQuizL4" element={<ModuleTwoQuizL4Page />} />
-                    <Route path="/ModuleTwoQuizL5" element={<ModuleTwoQuizL5Page />} />
-                    */}
-                </Routes>
-            </Router>
+                <Route path="/Metrics" element={<MetricsPage />} />
+                {/*
+                <Route path="/ModuleTwoL1" element={<ModuleTwoL1Page />} />
+                <Route path="/ModuleTwoL2" element={<ModuleTwoL2Page />} />
+                <Route path="/ModuleTwoL3" element={<ModuleTwoL3Page />} />
+                <Route path="/ModuleTwoL4" element={<ModuleTwoL4Page />} />
+                <Route path="/ModuleTwoL5" element={<ModuleTwoL5Page />} />
+                <Route path="/ModuleTwoQuizL1" element={<ModuleTwoQuizL1Page />} />
+                <Route path="/ModuleTwoQuizL2" element={<ModuleTwoQuizL2Page />} />
+                <Route path="/ModuleTwoQuizL3" element={<ModuleTwoQuizL3Page />} />
+                <Route path="/ModuleTwoQuizL4" element={<ModuleTwoQuizL4Page />} />
+                <Route path="/ModuleTwoQuizL5" element={<ModuleTwoQuizL5Page />} />
+                */}
+            </Routes>
         </>
     )
 }

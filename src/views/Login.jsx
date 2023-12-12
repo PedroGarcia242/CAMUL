@@ -31,10 +31,10 @@ export default function LogInView() {
                     <Form.Control className="mb-3" type="email" placeholder="Email Address *" />
                     <Form.Control className="mb-4" type="password" placeholder="Password *" />
 
-                    <Button variant="success" className="login-button w-100 mb-3" type="submit" onClick={handleSubmit} href="/">Continue</Button>
+                    <Button variant="success" className="login-button w-100 mb-3" type="submit" onClick={handleSubmit} href="/CAMUL/">Continue</Button>
 
                     <p className="text-end">
-                        <a className="under-login-button" href="/SignUp" >Don&apos;t have an account? Sign Up</a>
+                        <a className="under-login-button" href="/CAMUL/#/Signup" >Don&apos;t have an account? Sign Up</a>
                     </p>
                 </Form>
             </Col>

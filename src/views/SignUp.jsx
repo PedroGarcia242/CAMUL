@@ -29,7 +29,7 @@ export default function SignUpView() {
                     <Button variant="success" className="login-button w-100 mb-3" type="submit">Sign Up</Button>
 
                     <p className="text-end">
-                        <a className="under-login-button" href="/LogIn" >Already have an account? Log In</a>
+                        <a className="under-login-button" href="/CAMUL/#/LogIn" >Already have an account? Log In</a>
                     </p>
                 </Form>
             </Col>
