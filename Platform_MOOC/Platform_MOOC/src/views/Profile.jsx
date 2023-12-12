@@ -90,7 +90,7 @@ const Profile = () => {
     const displayFooter = () => {
         return (
             <>
-                <div className="footer-info-page">
+               <div className="footer-profile">
 
                     <div onClick={goToYoutubeChannel}>
                         <img className="social-icon" src={ytubefooter} alt="" />

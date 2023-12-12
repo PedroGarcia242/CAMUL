@@ -65,23 +65,12 @@ const Info = () => {
                     </div>
                 </div>
 
-                <div className="home-video">
-                    <Container className="mb-4">
-                        <Row>
-                            <Col xl={8}>
-                                <div className="video-container-home-page">
-                                    <div className="video-background-home-page">
-                                        <iframe
-                                            src="https://www.youtube.com/embed/Ufs0Y6HkPD4"
-                                            frameBorder="0"
-                                            allowFullScreen
-                                        ></iframe>
-                                    </div>
-                                </div>
-                            </Col>
-                        </Row>
-                    </Container>
-                </div>
+                <iframe width="1120" height="630"
+                    src="https://www.youtube.com/embed/Ufs0Y6HkPD4?si=DzG8rxLafODpVdr3" title="YouTube video player"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                ></iframe>
                 
                 <div style={{ zIndex: 10, position: 'relative' }}>
                     <div className="home-header">
@@ -91,17 +80,18 @@ const Info = () => {
                         </div>
                     </div>
 
+                    <div className="faq_accordion">
                     <div className="faq-details">
                         <div className="faq-content">
                             <Accordion defaultActiveKey="0">
                                 <Accordion.Item eventKey="0">
-                                    <Accordion.Header>How much does your product cost?</Accordion.Header>
+                                    <Accordion.Header>Q: How much does your product cost?</Accordion.Header>
                                     <Accordion.Body>
                                         <h6>Nothing! Our product is free for everyone. Come experience our course and learn all about Marketing and Communication.</h6>
                                     </Accordion.Body>
                                 </Accordion.Item>
                                 <Accordion.Item eventKey="1">
-                                    <Accordion.Header>I have little to no experience in the Marketing and Communication fields. Do I need it to take this course?</Accordion.Header>
+                                    <Accordion.Header>Q: I have little to no experience in the Marketing and Communication fields. Do I need it to take this course?</Accordion.Header>
                                     <Accordion.Body>
                                         <h6>You do not need any previous experience or knowledge in the meantioned fields in order to take our course!
                                             We aim to introduce our students to the art of Integrated Marketing Communication by being their first contact with these topics.
@@ -109,13 +99,13 @@ const Info = () => {
                                     </Accordion.Body>
                                 </Accordion.Item>
                                 <Accordion.Item eventKey="2">
-                                    <Accordion.Header>Do I need to create an account in order to access the lessons?</Accordion.Header>
+                                    <Accordion.Header>Q: Do I need to create an account in order to access the lessons?</Accordion.Header>
                                     <Accordion.Body>
                                         <h6>No! Just about anyone with the desire for knowledge can access and enjoy the lessons curated by us.</h6>
                                     </Accordion.Body>
                                 </Accordion.Item>
                                 <Accordion.Item eventKey="3">
-                                    <Accordion.Header>Do I need to follow the lessons in a sequential order, from Module One to Module Three?</Accordion.Header>
+                                    <Accordion.Header>Q: Do I need to follow the lessons in a sequential order, from Module One to Module Three?</Accordion.Header>
                                     <Accordion.Body>
                                         <h6>No! Students can progress through the course by their own accord. While some lessons and concepts can be easier to understand if the student
                                             has acquired knowledge from previous lessons and/or Modules (and for this reason we do recommmend following the lessons in a sequential order), the truth is
@@ -124,7 +114,7 @@ const Info = () => {
                                     </Accordion.Body>
                                 </Accordion.Item>
                                 <Accordion.Item eventKey="4">
-                                    <Accordion.Header>Are my quiz results shared with everyone?</Accordion.Header>
+                                    <Accordion.Header>Q: Are my quiz results shared with everyone?</Accordion.Header>
                                     <Accordion.Body>
                                         <h6>Yes, but anonymously. By creating an account in our website, users consent to anonymously share with us the results they obtain in the various quizzes.
                                             This data is then used to create the Metrics page that can be found in our website.</h6>
@@ -143,7 +133,7 @@ const Info = () => {
                             <div id="thankYouMessage" style={{ display: 'none', color: 'green', marginTop: '40px' }}>Thank you for your feedback!</div>
                         </div>
                     </div>
-
+                    </div>
                     {displayFooter()}
                 </div>
             </div>
