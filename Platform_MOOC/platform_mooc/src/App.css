@@ -127,10 +127,6 @@ li {
     justify-content: center
 }
 
-.footer-profile {
-    background: #E1DFCB;
-}
-
 .footer-module-one {
     background: #0E2417;
 }
@@ -144,7 +140,8 @@ li {
 }
 
 .footer-info-page,
-.footer-home-page {
+.footer-home-page,
+.footer-profile {
     background: #E1DFCB;
 }
 
