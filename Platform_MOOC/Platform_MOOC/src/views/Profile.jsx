@@ -12,7 +12,9 @@ import quiz1 from '../assets/quiz_one.png';
 import quiz2 from '../assets/quiz_two.png';
 import quiz3 from '../assets/quiz_three.png';
 import userIcon from '../assets/user_icon.png';
+import ytubefooter from '../assets/youtube_footer.png';
 
+import igramfooter from '../assets/instagram_footer.png';
 const Profile = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
     const navigate = useNavigate();
@@ -30,6 +32,12 @@ const Profile = () => {
     const handleModuleThreeClick = () => {
         navigate('/ModuleThree/1');
         window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+    const goToYoutubeChannel = () => {
+        window.location.href = 'https://youtu.be/oeh2TKq6PF4?feature=shared';
+    };
+    const goToInstaProfile = () => {
+        window.location.href = 'https://www.instagram.com/mrktng_cmmnctn/?next=%2Fd';
     };
 
     const handleQuizClick = (module) => {
@@ -82,7 +90,16 @@ const Profile = () => {
     const displayFooter = () => {
         return (
             <>
-                <div className="footer-profile">
+                <div className="footer-info-page">
+
+                    <div onClick={goToYoutubeChannel}>
+                        <img className="social-icon" src={ytubefooter} alt="" />
+                    </div>
+
+                    <div onClick={goToInstaProfile}>
+                        <img className="social-icon" src={igramfooter} alt="" />
+                    </div>
+
                 </div>
             </>
         )

@@ -6,13 +6,21 @@ import Row from 'react-bootstrap/Row';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import Accordion from 'react-bootstrap/Accordion';
+import ytubefooter from '../assets/youtube_footer.png';
 
+import igramfooter from '../assets/instagram_footer.png';
 import homeBackground from '../assets/background_texture.png';
 
 const Home = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
     const navigate = useNavigate();
 
+    const goToYoutubeChannel = () => {
+        window.location.href = 'https://youtu.be/oeh2TKq6PF4?feature=shared';
+    };
+    const goToInstaProfile = () => {
+        window.location.href = 'https://www.instagram.com/mrktng_cmmnctn/?next=%2Fd';
+    };
     const handleModuleOneClick = () => {
         navigate('/ModuleOne/1');
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -32,7 +40,16 @@ const Home = () => {
     const displayFooter = () => {
         return (
             <>
-                <div className="footer-home-page">
+                <div className="footer-info-page">
+
+                    <div onClick={goToYoutubeChannel}>
+                        <img className="social-icon" src={ytubefooter} alt="" />
+                    </div>
+
+                    <div onClick={goToInstaProfile}>
+                        <img className="social-icon" src={igramfooter} alt="" />
+                    </div>
+
                 </div>
             </>
         )

@@ -4,14 +4,30 @@ import Row from 'react-bootstrap/Row';
 import BarChart from './BarChart'
 import overallMetrics from '../../assets/overall_metrics.png';
 import homeBackground from '../../assets/background_texture.png';
+import ytubefooter from '../../assets/youtube_footer.png';
+import igramfooter from '../../assets/instagram_footer.png';
 
 const Metrics = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-
+    const goToYoutubeChannel = () => {
+        window.location.href = 'https://youtu.be/oeh2TKq6PF4?feature=shared';
+    };
+    const goToInstaProfile = () => {
+        window.location.href = 'https://www.instagram.com/mrktng_cmmnctn/?next=%2Fd';
+    };
     const displayFooter = () => {
         return (
             <>
-                <div className="footer-home-page">
+                <div className="footer-info-page">
+
+                    <div onClick={goToYoutubeChannel}>
+                        <img className="social-icon" src={ytubefooter} alt="" />
+                    </div>
+
+                    <div onClick={goToInstaProfile}>
+                        <img className="social-icon" src={igramfooter} alt="" />
+                    </div>
+
                 </div>
             </>
         )

@@ -8,16 +8,49 @@ import Accordion from 'react-bootstrap/Accordion';
 
 import infoBackground from '../assets/background_texture.png';
 
+import ytubefooter from '../assets/youtube_footer.png';
+
+import igramfooter from '../assets/instagram_footer.png';
+
 const Info = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    const goToYoutubeChannel = () => {
+        window.location.href = 'https://youtu.be/oeh2TKq6PF4?feature=shared';
+    };
+    const goToInstaProfile = () => {
+        window.location.href = 'https://www.instagram.com/mrktng_cmmnctn/?next=%2Fd';
+    };
 
     const displayFooter = () => {
         return (
             <>
                 <div className="footer-info-page">
+
+                    <div onClick={goToYoutubeChannel}>
+                        <img className="social-icon" src={ytubefooter} alt="" />
+                    </div>
+
+                    <div onClick={goToInstaProfile}>
+                        <img className="social-icon" src={igramfooter} alt="" />
+                    </div>
+
                 </div>
             </>
         )
+    }
+
+    const submitFeedback = () => {
+        // Get the text from the textarea
+        var reviewText = document.getElementById("reviewText").value;
+
+        // Perform any necessary actions with the reviewText (e.g., send it to a server)
+
+        // Clear the textarea
+        document.getElementById("reviewText").value = "";
+
+        // Display the thank you message
+        document.getElementById("thankYouMessage").style.display = "block";
     }
 
     return (
@@ -25,17 +58,40 @@ const Info = () => {
             <div className="content-info-page">
                 <img className="background-home" src={infoBackground} alt="" />
 
+                <div className="home-header">
+                    <h2>Introduction Video</h2>
+                    <div className="home-header-content">
+                        <h5>Explore our content, learn for free.</h5>
+                    </div>
+                </div>
+
+                <div className="home-video">
+                    <Container className="mb-4">
+                        <Row>
+                            <Col xl={8}>
+                                <div className="video-container-home-page">
+                                    <div className="video-background-home-page">
+                                        <iframe
+                                            src="https://www.youtube.com/embed/Ufs0Y6HkPD4"
+                                            frameBorder="0"
+                                            allowFullScreen
+                                        ></iframe>
+                                    </div>
+                                </div>
+                            </Col>
+                        </Row>
+                    </Container>
+                </div>
+                
                 <div style={{ zIndex: 10, position: 'relative' }}>
-                    <div className="info-header">
-                        <h2>Do you need answers?</h2>
-                        <div className="info-header-content mb-5">
-                            <h5>You came to the right place</h5>
+                    <div className="home-header">
+                        <h2>Frequently asked questions</h2>
+                        <div className="home-header-content">
+                            <h5>We have the answers</h5>
                         </div>
                     </div>
 
-
                     <div className="faq-details">
-                        <h2 className="my-4">Frequently Asked Questions</h2>
                         <div className="faq-content">
                             <Accordion defaultActiveKey="0">
                                 <Accordion.Item eventKey="0">
@@ -82,7 +138,9 @@ const Info = () => {
                         <h2>Send a Review</h2>
                         <div className="review-form mb-5">
                             <h5 className="mb-3">Help us improve</h5>
-                            <textarea className="form-control form-control-lg" rows="6" placeholder="Write your review here..."></textarea>
+                            <textarea id="reviewText" className="form-control form-control-lg" rows="6" placeholder="Write your review here..."></textarea>
+                            <button onClick={submitFeedback} className="btn btn-primary mt-3">Submit your feedback</button>
+                            <div id="thankYouMessage" style={{ display: 'none', color: 'green', marginTop: '40px' }}>Thank you for your feedback!</div>
                         </div>
                     </div>
 

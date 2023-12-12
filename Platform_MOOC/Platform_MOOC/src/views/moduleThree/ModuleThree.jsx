@@ -5,7 +5,8 @@ import module_three_background from '../../assets/module_three_bg.png';
 import transcriptImage from '../../assets/transcriptImage.png';
 import youtubeImage from '../../assets/youtubeImage.png';
 import quizImage from '../../assets/quizImage.png';
-
+import ytubefooter from '../../assets/youtube_footer.png';
+import igramfooter from '../../assets/instagram_footer.png';
 const ModuleThree = () => {
     const navigate = useNavigate();
     var { currentLessonNumber } = useParams();
@@ -16,7 +17,12 @@ const ModuleThree = () => {
         currentLessonNumber !== '5') {
         currentLessonNumber = '1';
     }
-
+    const goToYoutubeChannel = () => {
+        window.location.href = 'https://youtu.be/oeh2TKq6PF4?feature=shared';
+    };
+    const goToInstaProfile = () => {
+        window.location.href = 'https://www.instagram.com/mrktng_cmmnctn/?next=%2Fd';
+    };
     const handleNavigateClick = (lessonNumber) => {
         navigate('/ModuleThree/' + lessonNumber);
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -133,7 +139,16 @@ const ModuleThree = () => {
     const displayFooter = () => {
         return (
             <>
-                <div className="footer-module-three">
+                <div className="footer-info-page">
+
+                    <div onClick={goToYoutubeChannel}>
+                        <img className="social-icon" src={ytubefooter} alt="" />
+                    </div>
+
+                    <div onClick={goToInstaProfile}>
+                        <img className="social-icon" src={igramfooter} alt="" />
+                    </div>
+
                 </div>
             </>
         )

@@ -625,6 +625,12 @@ li {
     top: 0;
 }
 
+search-bag-img {
+    padding: 40px;
+    position: absolute;
+    top: 0;
+}
+
 .card-content {
     display: flex;
     border-bottom-left-radius: 5px;
@@ -771,7 +777,7 @@ h1.module-three-selected-chapter {
     max-width: 600px;
 }
 
-.module-details {
+.faq-details {
     background: #E1DFCB;
     margin-top: 30px;
     margin-bottom: 100px;
@@ -780,15 +786,15 @@ h1.module-three-selected-chapter {
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-    .module-details h2 {
+    .faq-details h2 {
         color: #252525;
     }
 
-.module-details h3 {
+.faq-details h3 {
     color: #252525;
 }
 
-.module-details-content {
+.faq-details-content {
     padding: 0 15%;
 }
 
@@ -906,9 +912,18 @@ h1.module-three-selected-chapter {
         background-image: var(--bs-accordion-btn-icon);
         filter: invert(1);
     }
+.info-top-header {
+    padding-top: 60px;
+    margin: 55px 10px 0 10px;
+}
+
+    .info-top-header h2 {
+        color: #dad6bb
+    }
+
 
 .faq {
-    background: #E1DFCB;
+    background: #b16161;
     margin-top: 30px;
     margin-bottom: 100px;
     padding-top: 30px;
@@ -1022,4 +1037,41 @@ h1.module-three-selected-chapter {
 :focus {
     outline: 0 !important;
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) !important;
+}
+
+
+.accordion {
+    list-style: none;
+    padding: 0;
+}
+
+.accordion-item {
+    border: 4px solid #32213a; 
+    margin-bottom: 10px;
+}
+
+.accordion-header {
+    padding: 2px;
+    cursor: pointer;
+    background-color: #32213a;
+    color: #b16161;
+}
+
+.accordion-content {
+    display: none;
+    padding: 2px;
+    background-color: #32213a; 
+}
+
+/* Style for active (open) accordion items */
+.accordion-item.active .accordion-content {
+    display: block;
+    background-color: #b16161;
+}
+
+/* Styling for social media icons */
+.social-icon {
+    width: 40px;
+    height: 40px;
+    margin: 15px 15px 0;
 }
