@@ -250,7 +250,7 @@ li {
     width: 100%;
     position: absolute;
     height: 280px;
-    background: #E1DFCB;
+    background: #d1caa1;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 10;
 }
@@ -595,7 +595,7 @@ li {
 .block {
     margin: 3px 0;
     padding: 10px;
-    background: #E1DFCB;
+    background: #d1caa1;
     border-radius: 10px;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
 }
