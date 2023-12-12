@@ -7,15 +7,6 @@ import loginBanner from '../assets/login_banner.png';
 
 export default function SignUpView() {
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        const data = new FormData(event.currentTarget);
-        console.log({
-            email: data.get('email'),
-            password: data.get('password'),
-        });
-    };
-
     return (
         <Row className="login-page">
             <Col className="d-none d-md-flex h-100 p-0" md={6}>
@@ -29,10 +20,10 @@ export default function SignUpView() {
                     <Form.Control className="mb-4" type="password" placeholder="Password *" />
                     <Form.Control className="mb-4" type="password" placeholder="Confirm Password *" />
 
-                    <Button className="w-100 mb-3" type="submit">Sign Up</Button>
+                    <Button variant="success" className="login-button w-100 mb-3" type="submit">Sign Up</Button>
 
                     <p className="text-end">
-                        <a href="/LogIn" >Already have an account? Log In</a>
+                        <a className="under-login-button" href="/LogIn" >Already have an account? Log In</a>
                     </p>
                 </Form>
             </Col>
