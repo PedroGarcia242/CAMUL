@@ -67,6 +67,7 @@ li {
     top: 0;
     z-index: 1000;
     height: 7%;
+    min-height: 60px;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -86,13 +87,22 @@ li {
     }
 
 .navbar-items {
-    width: auto;
+    width: 30%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     margin: 0;
     padding: 0;
 }
+
+.left {
+    justify-content: left;
+}
+
+.right {
+    justify-content: right;
+}
+
 
     .navbar-items .text-button:hover {
         cursor: pointer;
@@ -173,11 +183,19 @@ li {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 70px;
+    padding: 0;
 }
 
 .login-form {
     width: 70%;
+}
+
+.login-form h2{
+    margin-bottom: 30px;
+}
+
+.login-extra {
+    background-color: #d1caa1;
 }
 
 .content-profile {

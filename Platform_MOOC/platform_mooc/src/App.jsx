@@ -6,7 +6,8 @@ import Home from './views/Home';
 import Info from './views/Info';
 import Profile from './views/Profile';
 
-import Login from './views/Login';
+import LogIn from './views/LogIn';
+import SignUp from './views/SignUp';
 
 import ModuleOne from './views/moduleOne/ModuleOne';
 import ModuleTwo from './views/moduleTwo/ModuleTwo';
@@ -14,29 +15,17 @@ import ModuleThree from './views/moduleThree/ModuleThree';
 
 import Metrics from './views/moduleMetrics/Metrics';
 
-
-/*
-import ModuleTwoL1 from './views/moduleTwo/ModuleTwoL1';
-import ModuleTwoL2 from './views/moduleTwo/ModuleTwoL2';
-import ModuleTwoL3 from './views/moduleTwo/ModuleTwoL3';
-import ModuleTwoL4 from './views/moduleTwo/ModuleTwoL4';
-import ModuleTwoL5 from './views/moduleTwo/ModuleTwoL5';
-import ModuleTwoQuizL1 from './views/moduleTwo/ModuleTwoQuizL1';
-import ModuleTwoQuizL2 from './views/moduleTwo/ModuleTwoQuizL2';
-import ModuleTwoQuizL3 from './views/moduleTwo/ModuleTwoQuizL3';
-import ModuleTwoQuizL4 from './views/moduleTwo/ModuleTwoQuizL4';
-import ModuleTwoQuizL5 from './views/moduleTwo/ModuleTwoQuizL5';
-*/
-
 function App() {
 
-    window.isLoggedIn = true;
+    var isLoggedInString = localStorage['isLoggedIn'] || 'false';
+    var isLoggedIn = (isLoggedInString === "true");
 
     const HomePage = () => <Home />;
     const InfoPage = () => <Info />;
     const ProfilePage = () => <Profile />;
 
-    const LoginPage = () => <Login />;
+    const LogInPage = () => <LogIn />;
+    const SignUpPage = () => <SignUp />;
 
     const ModuleOnePage = () => <ModuleOne />;
     const ModuleTwoPage = () => <ModuleTwo />;
@@ -44,38 +33,32 @@ function App() {
 
     const MetricsPage = () => <Metrics />;
 
-    /*
-    const ModuleTwoL1Page = () => <ModuleTwoL1 />;
-    const ModuleTwoL2Page = () => <ModuleTwoL2 />;
-    const ModuleTwoL3Page = () => <ModuleTwoL3 />;
-    const ModuleTwoL4Page = () => <ModuleTwoL4 />;
-    const ModuleTwoL5Page = () => <ModuleTwoL5 />;
-    const ModuleTwoQuizL1Page = () => <ModuleTwoQuizL1 />;
-
-    const ModuleTwoQuizL2Page = () => <ModuleTwoQuizL2 />;
-    const ModuleTwoQuizL3Page = () => <ModuleTwoQuizL3 />;
-    const ModuleTwoQuizL4Page = () => <ModuleTwoQuizL4 />;
-    const ModuleTwoQuizL5Page = () => <ModuleTwoQuizL5 />;
-    */
-
+    const logOut = () => {
+        localStorage['isLoggedIn'] = 'false';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        this.forceUpdate();
+    };
     //FUNCTIONS
     //navbar
     const displayNavbar = () => {
         return (
             <>
                 <nav className="navbar">
-                    <ul className="navbar-items">
+                    <ul className="navbar-items left">
                         <li className="text-button"><Link to="/">HOME</Link></li>
-                        <li className="text-button"><Link to="/info">INFO</Link></li>
-                        <li className="text-button"><Link to="/profile">PROFILE</Link></li>
-                        <li className="text-button"><Link to="/Login">LOGIN</Link></li>
-                        <li className="text-button"><Link to="/Metrics">METRICS</Link></li>
+                        <li className="text-button"><Link to="/Info">INFO</Link></li>
 
                     </ul>
                     <ul className="navbar-items">
                         <li className="text-button"><Link to="/ModuleOne/1">MODULE 1</Link></li>
                         <li className="text-button"><Link to="/ModuleTwo/1">MODULE 2</Link></li>
                         <li className="text-button"><Link to="/ModuleThree/1">MODULE 3</Link></li>
+                    </ul>
+                    <ul className="navbar-items right">
+                        {isLoggedIn ? <li className="text-button"><Link to="/Profile">PROFILE</Link></li> : null}
+                        {!isLoggedIn ? <li className="text-button"><Link to="/Login">LOG IN</Link></li> : null}
+                        {isLoggedIn ? <li className="text-button"><Link to="/Metrics">METRICS</Link></li> : null}
+                        {isLoggedIn ? <li className="text-button"><Link to="/Login" onClick={logOut}>LOG OUT</Link></li> : null}
                     </ul>
                 </nav>
             </>
@@ -93,7 +76,8 @@ function App() {
                     <Route path="/Info" element={ <InfoPage /> } />
                     <Route path="/Profile" element={<ProfilePage />} />
 
-                    <Route path="/Login" element={<LoginPage />} />
+                    <Route path="/LogIn" element={<LogInPage />} />
+                    <Route path="/SignUp" element={<SignUpPage />} />
 
                     <Route path="/ModuleOne/:currentLessonNumber" element={<ModuleOnePage />} />
                     <Route path="/ModuleTwo/:currentLessonNumber" element={<ModuleTwoPage />} />

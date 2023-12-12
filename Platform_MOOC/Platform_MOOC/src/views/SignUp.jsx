@@ -5,12 +5,15 @@ import Button from 'react-bootstrap/Button';
 
 import loginBanner from '../assets/login_banner.png';
 
-export default function LogInView() {
+export default function SignUpView() {
 
-    const handleSubmit = () => {
-        localStorage['isLoggedIn'] = 'true';
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-        this.forceUpdate()
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        const data = new FormData(event.currentTarget);
+        console.log({
+            email: data.get('email'),
+            password: data.get('password'),
+        });
     };
 
     return (
@@ -20,15 +23,16 @@ export default function LogInView() {
             </Col>
             <Col className="login-form-container" md={4}>
                 <Form className="login-form">
-                    <h2>Log In</h2>
+                    <h2>Create an Account</h2>
 
                     <Form.Control className="mb-3" type="email" placeholder="Email Address *" />
                     <Form.Control className="mb-4" type="password" placeholder="Password *" />
+                    <Form.Control className="mb-4" type="password" placeholder="Confirm Password *" />
 
-                    <Button className="w-100 mb-3" type="submit" onClick={handleSubmit} href="/">Continue</Button>
+                    <Button className="w-100 mb-3" type="submit">Sign Up</Button>
 
                     <p className="text-end">
-                        <a href="/SignUp" >Don&apos;t have an account? Sign Up</a>
+                        <a href="/LogIn" >Already have an account? Log In</a>
                     </p>
                 </Form>
             </Col>
